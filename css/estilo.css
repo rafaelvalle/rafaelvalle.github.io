@@ -481,10 +481,10 @@
     ----------------------------------------------- */
 
         #sidebar {
-            float: right;
+            float: left;
             margin: 0 0 20px 0;
             padding: 20px 0;
-            width: 34%;
+            width: 100%;
             color: #666;
         }
 
