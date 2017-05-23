@@ -103,7 +103,8 @@
     <ul>    
     <li> <a target="_blank" href="#ASRGEN">Paper</a> about attacking speaker recognition with deep generative models is under review.</a></li>
     <li> <a target="_blank" href="#IPGAN">Paper</a> about interesting properties of samples generated with GANs is under review.</li>
-    <li> <a target="_blank" href="#SEQGAN">Paper</a> about sequence generation (text, speech, music) with GANs is under review.</li>
+    <li> <a target="_blank" href="#SEQGAN">Paper</a> about 
+    eration (text, speech, music) with GANs is under review.</li>
 
     </ul>
   </td></tr>
@@ -119,7 +120,7 @@
       <p><a target="_blank" href="https://github.com/rafaelvalle/asrgen/main.pdf" id="ASRGEN">
       <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Attacking Speaker Recognition with Deep Generative Models</heading></a><br>
-      Anish Doshi, Wilson Cai, <strong>Rafael Valle</strong><br>
+      Anish Doshi, Wilson Cai and <strong>Rafael Valle</strong><br>
       <em>under review</em>, 2017<br>
 
       <div class="paper" id="asrgen">
@@ -136,7 +137,7 @@
       <p><a target="_blank" href="https://github.com/rafaelvalle/ipgans/blob/master/latex/qagan.pdf" id="IPGAN">
       <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Interesting Properties of GAN Samples</heading></a><br>
-      <strong>Rafael Valle</strong>, Wilson Cai, Anish Doshi<br>
+      <strong>Rafael Valle</strong>, Wilson Cai and Anish Doshi<br>
       <em>under review</em>, 2017
       <br></p>
 
@@ -180,6 +181,7 @@
       <a target="_blank" href="javascript:toggleblock('abroa_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('abroa16')" class="togglebib">bibtex</a> |
       <a target="_blank" href="https://arxiv.org/abs/1607.07801">arXiv</a> |
+      <a target="_blank" href="https://github.com/rafaelvalle/machine_listening/">code</a>
 
       <p align="justify"> <i id="abroa_abs">This paper outlines preliminary steps towards the development of an audio based room-occupancy analysis model. Our approach borrows from speech recognition tradition and is based on Gaussian Mixtures and Hidden Markov Models. We analyse possible challenges encountered in the development of such a model, and offer several solutions including feature design and prediction strategies. We provide results obtained from experiments with audio data from a retail store in Palo Alto, California. Model assessment is done via leave-two-out Bootstrap and model convergence achieves good accuracy, thus representing a contribution to multimodal people counting algorithms.</i></p>
 
@@ -194,6 +196,67 @@
       </div>
     </td>
   </tr>
+
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://github.com/rafaelvalle/mdi"><img src="images/mdi.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="context_encoder/" id="MDI">
+      <heading>Missing Data Imputation for Supervised Classification</heading></a><br>
+      Jason Poulos and <strong>Rafael Valle</strong><br>
+      <em>ArXiv</em>, 2016
+      <br></p>
+
+      <div class="paper" id="pattgraph">
+      <a target="_blank" href="https://arxiv.org/pdf/1610.09075.pdf">pdf</a> |
+      <a target="_blank" href="javascript:toggleblock('mdi_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('mdi16')" class="togglebib">bibtex</a> |
+      <a target="_blank" href="https://arxiv.org/pdf/1610.09075">arXiv</a> | 
+      <a target="_blank" href="https://github.com/rafaelvalle/mdi">code</a>
+
+      <p align="justify"> <i id="mdi_abs">This paper compares methods for imputing missing categorical data for supervised learning tasks. The ability of researchers to accurately fit a model and yield unbiased estimates may be compromised by missing data, which are prevalent in survey-based social science research. We experiment on two machine learning benchmark datasets with missing categorical data, comparing classifiers trained on non-imputed (i.e., onehot encoded) or imputed data with different degrees of missingdata perturbation. The results show imputation methods can increase predictive accuracy in the presence of missing-data perturbation. Additionally, we find that for imputed models, missingdata perturbation can improve prediction accuracy by regularizing the classifier.</i></p>
+
+      <pre xml:space="preserve">
+      @article{poulos2016missing,
+        title={Missing Data Imputation for Supervised Learning},
+        author={Poulos, Jason and Valle, Rafael},
+        journal={arXiv preprint arXiv:1610.09075},
+        year={2016}
+      }
+      </pre>
+      </div>
+    </td>
+  </tr>  
+
+
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://github.com/rafaelvalle/music_pattern_graphs"><img src="images/pattgraph.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="context_encoder/" id="PATTGRAPH">
+      <heading>Learning and Visualizing Music Specifications using Pattern Graphs</heading></a><br>
+      <strong>Rafael Valle</strong>, Daniel Fremont, Ilge Akkaya, Alexandre Donze, Adrian Freed and Sanjit Seshia<br>
+      <em>ISMIR</em>, 2016
+      <br></p>
+
+      <div class="paper" id="pattgraph">
+      <a target="_blank" href="https://wp.nyu.edu/ismir2016/wp-content/uploads/sites/2294/2016/07/280_Paper.pdf">pdf</a> |
+      <a target="_blank" href="javascript:toggleblock('pattgraph_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('pattgraph16')" class="togglebib">bibtex</a> |
+      <a target="_blank" href="https://github.com/rafaelvalle/music_pattern_graphs">code</a>
+
+      <p align="justify"> <i id="pattgraph_abs">We describe a system to learn and visualize specifications from song(s) in symbolic and audio formats. The core of our approach is based on a software engineering procedure called specification mining. Our procedure extracts patterns from feature vectors and uses them to build pattern graphs. The feature vectors are created by segmenting song(s) and extracting time and and frequency domain features from them, such as chromagrams, chord degree and interval classification. The pattern graphs built on these feature vectors provide the likelihood of a pattern between nodes, as well as start and ending nodes. The pattern graphs learned from a song(s) describe formal specifications that can be used for human interpretable quantitatively and qualitatively song comparison or to perform supervisory control in machine improvisation. We offer results in song summarization, song and style validation and machine improvisation with formal specifications.</i></p>
+
+      <pre xml:space="preserve">
+      @inproceedings{valle2016learning,
+        title={Learning and Visualizing Music Specifications using Pattern Graphs},
+        author={Valle, Rafael and Fremont, Daniel J and Akkaya, Ilge and Donze, Alexandre and Freed, Adrian and Seshia, Sanjit S},
+        booktitleaddon= {Proceedings of the Seventeenth ISMIR Conference}        
+        booktitle={ISMIR},
+        year={2016}
+      }      
+      </pre>
+      </div>
+    </td>
+  </tr>  
 </table>
 
 <script xml:space="preserve" language="JavaScript">
@@ -210,6 +273,12 @@ hideblock('abroa_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
 hideblock('seqgan_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+hideblock('mdi_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+hideblock('pattgraph_abs');
 </script>
 </body>
 
