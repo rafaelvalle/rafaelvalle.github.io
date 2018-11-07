@@ -115,6 +115,7 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td>
     <sectionheading>News</sectionheading>
     <ul>    
+    <li> <a href="#WAVEGLOW">Paper</a> about high quality and fast speech synthesis from mel-spectrograms.</li>
     <li> <a href="#IPGAN">Paper</a> about easily identifying GAN samples is on arXiv.</li>
     <li> <a href="#ASRGEN">Paper</a> about attacking speaker recognition with deep generative models is on arXiv.</a></li>
     <li> <a href="#SEQGAN">Paper</a> about sequence generation (text, speech, music) with GANs is in progress.</li>
@@ -127,6 +128,28 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td><sectionheading>Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td width="33%" valign="top" align="center">
+        		<iframe src="https://chirb.it/wp/vd245B" width=200" scrolling="NO" frameborder=0>If you can not see this chirbit, listen to it here https://chirb.it/vd245B</iframe>
+
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://arxiv.org/abs/1811.00002" id="WAVEGLOW">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>WaveGlow: a Flow-based Generative Network for Speech Synthesis </heading></a><br>
+      Ryan Prenger, <strong>Rafael Valle</strong>, Bryan Catanzaro<br>
+      <em>arXiv</em>, 2018<br>
+      <br></p>
+
+      <div class="paper" id="waveglow">
+      <a target="_blank" href="https://arxiv.org/abs/1807.04919">pdf</a> | 
+      <a target="_blank" href="https://nv-adlr.github.io/WaveGlow">samples</a> |
+      <a target="_blank" href="javascript:toggleblock('waveglow_abs')">abstract</a>    
+      <p align="justify"> <i id="waveglow_abs"> We propose WaveGlow: a flow-based network capable of generating high quality speech from mel-spectrograms. WaveGlow combines insights from Glow and WaveNet in order to provide fast, efficient and high-quality audio synthesis, without the need for auto-regression. WaveGlow is implemented using only a single network, trained using only a single cost function: maximizing the likelihood of the training data, which makes the training procedure simple and stable.
+
+</i></p>
+      </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://github.com/rafaelvalle/ipgans/"><img src="images/ipgan.png" alt="sym" width="100%" style="border-style: none"></a>
@@ -292,6 +315,9 @@ segments and scores that describe novelty seeking behavior in listeners.
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+<script xml:space="preserve" language="JavaScript">
+hideblock('waveglow_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
 hideblock('asrgen_abs');
