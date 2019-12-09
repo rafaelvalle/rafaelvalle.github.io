@@ -115,6 +115,7 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td>
     <sectionheading>News</sectionheading>
     <ul>    
+    <li> <a href="#MELLOTRON">Paper</a> about style transfer and expressive speech syhthesis without expressive training data. </li>
     <li> <a href="#WAVEGLOW">Paper</a> about high quality and fast speech synthesis from mel-spectrograms.</li>
     <li> <a href="#IPGAN">Paper</a> about easily identifying GAN samples is on arXiv.</li>
     <li> <a href="#ASRGEN">Paper</a> about attacking speaker recognition with deep generative models is on arXiv.</a></li>
@@ -128,25 +129,62 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td><sectionheading>Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
   <tr>
     <td width="33%" valign="top" align="center">
-        		<iframe src="https://chirb.it/wp/vd245B" width=200" scrolling="NO" frameborder=0>If you can not see this chirbit, listen to it here https://chirb.it/vd245B</iframe>
+        <img src="https://nv-adlr.github.io/images/mellotron_logo.png" style="width: 200px"></img>
+        <audio controls preload="none" style="width: 200px"><source src="http://docs.google.com/uc?export=open&id=1QFWDsrt9-iGY63bpKE-u-V1X5kE1wAvO" type="audio/mpeg">audio not supported</audio>
+
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://arxiv.org/abs/1910.11997" id="MELLOTRON">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Mellotron: Multispeaker expressive voice synthesis by conditioning on rhythm, pitch and global style tokens </heading></a><br>
+      <strong>Rafael Valle*</strong>, Jason Li*, Ryan Prenger, Bryan Catanzaro<br>
+      <em>arXiv</em>, 2019<br>
+      <br></p>
+
+      <div class="paper" id="waveglow">
+        <a target="_blank" href="https://arxiv.org/abs/1910.11997">pdf</a> | 
+        <a target="_blank" href="https://nv-adlr.github.io/Mellotron">samples</a> |
+        <a href="javascript:toggleblock('mellotron_abs')">abstract</a>    
+        <p align="justify"> <i id="mellotron_abs">Mellotron is a multispeaker
+          voice synthesis model based on Tacotron 2 GST that can make a
+          voice emote and sing without emotive or singing training data. By
+          explicitly conditioning on rhythm and continuous pitch contours
+          from an audio signal or music score, Mellotron is able to generate
+          speech in a variety of styles ranging from read speech to
+          expressive speech, from slow drawls to rap and from monotonous
+          voice to singing voice.  
+        </i></p>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center">
+        <img src="https://nv-adlr.github.io/images/waveglow_logo.png" style="width: 200px"></img>
+        <audio controls preload="none" style="width: 200px"<source src="http://docs.google.com/uc?export=open&id=1KOHZIr7iTupo13EAKpbdmjcbATPsV02i" type="audio/mpeg">audio not supported</audio>
 
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1811.00002" id="WAVEGLOW">
       <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
-      <heading>WaveGlow: a Flow-based Generative Network for Speech Synthesis </heading></a><br>
+      <heading>WaveGlow: a Flow-based Generative Network for Speech Synthesis</heading></a><br>
       Ryan Prenger, <strong>Rafael Valle</strong>, Bryan Catanzaro<br>
       <em>arXiv</em>, 2018<br>
       <br></p>
 
       <div class="paper" id="waveglow">
-      <a target="_blank" href="https://arxiv.org/abs/1807.04919">pdf</a> | 
-      <a target="_blank" href="https://nv-adlr.github.io/WaveGlow">samples</a> |
-      <a target="_blank" href="javascript:toggleblock('waveglow_abs')">abstract</a>    
-      <p align="justify"> <i id="waveglow_abs"> We propose WaveGlow: a flow-based network capable of generating high quality speech from mel-spectrograms. WaveGlow combines insights from Glow and WaveNet in order to provide fast, efficient and high-quality audio synthesis, without the need for auto-regression. WaveGlow is implemented using only a single network, trained using only a single cost function: maximizing the likelihood of the training data, which makes the training procedure simple and stable.
-
-</i></p>
+        <a target="_blank" href="https://arxiv.org/abs/1807.04919">pdf</a> | 
+        <a target="_blank" href="https://nv-adlr.github.io/WaveGlow">samples</a> |
+        <a href="javascript:toggleblock('waveglow_abs')">abstract</a>    
+        <p align="justify"> <i id="waveglow_abs"> We propose WaveGlow: a
+          flow-based network capable of generating high quality speech from
+          mel-spectrograms. WaveGlow combines insights from Glow and WaveNet in
+          order to provide fast, efficient and high-quality audio synthesis,
+          without the need for auto-regression. WaveGlow is implemented using
+          only a single network, trained using only a single cost function:
+          maximizing the likelihood of the training data, which makes the
+          training procedure simple and stable.
+        </i></p>
       </div>
     </td>
   </tr>
@@ -162,10 +200,19 @@ segments and scores that describe novelty seeking behavior in listeners.
       <br></p>
 
       <div class="paper" id="ipgan">
-      <a target="_blank" href="https://arxiv.org/abs/1807.04919">pdf</a> | 
-      <a target="_blank" href="javascript:toggleblock('ipgan_abs')">abstract</a>    
-      <p align="justify"> <i id="ipgan_abs"> In this paper we show strategies to easily identify fake samples generated with the Generative Adversarial Network framework. One strategy is based on the statistical analysis and comparison of raw pixel values and features extracted from them. The other strategy learns formal specifications from the real data and shows that fake samples violate the specifications of the real data. We show that fake samples produced with GANs have a universal signature that can be used to identify fake samples. We provide results on MNIST, CIFAR10, music and speech data.
-</i></p>
+        <a target="_blank" href="https://arxiv.org/abs/1807.04919">pdf</a> | 
+        <a href="javascript:toggleblock('ipgan_abs')">abstract</a>    
+        <p align="justify"> <i id="ipgan_abs"> In this paper we show
+          strategies to easily identify fake samples generated with the
+          Generative Adversarial Network framework. One strategy is based on
+          the statistical analysis and comparison of raw pixel values and
+          features extracted from them.  The other strategy learns formal
+          specifications from the real data and shows that fake samples
+          violate the specifications of the real data.  We show that fake
+          samples produced with GANs have a universal signature that can be
+          used to identify fake samples. We provide results on MNIST,
+          CIFAR10, music and speech data. 
+        </i></p>
       </div>
     </td>
   </tr>
@@ -181,7 +228,7 @@ segments and scores that describe novelty seeking behavior in listeners.
 
       <div class="paper" id="asrgen">
       <a target="_blank" href="https://arxiv.org/pdf/1801.02384.pdf">pdf</a> | 
-      <a target="_blank" href="javascript:toggleblock('asrgen_abs')">abstract</a> |
+      <a href="javascript:toggleblock('asrgen_abs')">abstract</a> |
       <a target="_blank" href="https://github.com/rafaelvalle/asrgen">code</a>
       <p align="justify"> <i id="asrgen_abs"> In this paper we investigate the
           ability of generative adversarial networks (GANs) to synthesize
@@ -212,7 +259,7 @@ segments and scores that describe novelty seeking behavior in listeners.
 
       <div class="paper" id="seqgan">
       <a target="_blank" href="http://github.com/rafaelvalle/neural_network_control_improvisation">github</a> |
-      <a target="_blank" href="javascript:toggleblock('seqgan_abs')">abstract</a> |
+      <a href="javascript:toggleblock('seqgan_abs')">abstract</a> |
       <a target="_blank" href="https://soundcloud.com/d_alma/sets/improved-wasserstein-gans-piano">audio</a>
       <p align="justify"> <i id="seqgan_abs">In this paper we investigate the generation of sequences using generative adversarial networks (GANs). We open the paper by providing a brief introduction to sequence generation and challenges in GANs. We briefly describe encoding strategies for text and MIDI data in light of their use with convolutional architectures. In our experiments we consider the unconditional generation of polyphonic and monophonic piano roll generation as well as short sequences. For each data type, we provide sonic or text examples of generated data, interpolation in the latent space and vector arithmetic.</i></p>
       </div>
@@ -231,7 +278,7 @@ segments and scores that describe novelty seeking behavior in listeners.
 
       <div class="paper" id="abroa">
       <a target="_blank" href="https://arxiv.org/pdf/1607.07801.pdf">pdf</a> |
-      <a target="_blank" href="javascript:toggleblock('abroa_abs')">abstract</a> |
+      <a href="javascript:toggleblock('abroa_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('abroa')" class="togglebib">bibtex</a> |
       <a target="_blank" href="https://arxiv.org/abs/1607.07801">arXiv</a> |
       <a target="_blank" href="https://github.com/rafaelvalle/machine_listening">code</a>
@@ -261,7 +308,7 @@ segments and scores that describe novelty seeking behavior in listeners.
 
       <div class="paper" id="mdi">
       <a target="_blank" href="https://arxiv.org/pdf/1610.09075.pdf">pdf</a> |
-      <a target="_blank" href="javascript:toggleblock('mdi_abs')">abstract</a> |
+      <a href="javascript:toggleblock('mdi_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('mdi')" class="togglebib">bibtex</a> |
       <a target="_blank" href="https://arxiv.org/pdf/1610.09075">arXiv</a> | 
       <a target="_blank" href="https://github.com/rafaelvalle/mdi">code</a>
@@ -293,7 +340,7 @@ segments and scores that describe novelty seeking behavior in listeners.
 
       <div class="paper" id="pattgraph">
       <a target="_blank" href="https://wp.nyu.edu/ismir2016/wp-content/uploads/sites/2294/2016/07/280_Paper.pdf">pdf</a> |
-      <a target="_blank" href="javascript:toggleblock('pattgraph_abs')">abstract</a> |
+      <a href="javascript:toggleblock('pattgraph_abs')">abstract</a> |
       <a shape="rect" href="javascript:togglebib('pattgraph')" class="togglebib">bibtex</a> |
       <a target="_blank" href="https://github.com/rafaelvalle/music_pattern_graphs">code</a>
 
@@ -315,6 +362,9 @@ segments and scores that describe novelty seeking behavior in listeners.
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+<script xml:space="preserve" language="JavaScript">
+hideblock('mellotron_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
 hideblock('waveglow_abs');
