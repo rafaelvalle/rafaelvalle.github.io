@@ -78,8 +78,8 @@
 
   <tr>
     <td width="67%" valign="middle" align="justify">
-    <p>I'm a research scientist at <a target="_blank" href="http://www.nvidia.com/">NVIDIA</a>
-    focusing on audio applications.<p>
+    <p>I'm a senior research scientist at <a target="_blank" href="http://www.nvidia.com/">NVIDIA</a>
+    focusing on audio and computer vision applications.<p>
     <p>During my PhD at <a target="_blank" href="http://www.berkeley.edu/">UC Berkeley</a> I was
     advised mainly by <a target="_blank"
         href="https://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a> and <a target="_blank"
@@ -114,12 +114,10 @@ segments and scores that describe novelty seeking behavior in listeners.
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tr><td>
     <sectionheading>News</sectionheading>
-    <ul>    
+    <ul>     
+    <li> <a href="#FLOWTRON">Paper</a> about text-to-spectrogram model with more realism and expressivity than current SOTA. </li>
     <li> <a href="#MELLOTRON">Paper</a> about style transfer and expressive speech syhthesis without expressive training data. </li>
     <li> <a href="#WAVEGLOW">Paper</a> about high quality and fast speech synthesis from mel-spectrograms.</li>
-    <li> <a href="#IPGAN">Paper</a> about easily identifying GAN samples is on arXiv.</li>
-    <li> <a href="#ASRGEN">Paper</a> about attacking speaker recognition with deep generative models is on arXiv.</a></li>
-    <li> <a href="#SEQGAN">Paper</a> about sequence generation (text, speech, music) with GANs is in progress.</li>
 
     </ul>
   </td></tr>
@@ -132,18 +130,45 @@ segments and scores that describe novelty seeking behavior in listeners.
 
   <tr>
     <td width="33%" valign="top" align="center">
+        <img src="https://nv-adlr.github.io/images/flowtron_logo.png" style="width: 200px"></img>
+        <audio controls preload="none" style="width: 200px"><source src="http://docs.google.com/uc?export=open&id=1bngjG6bMUWQi8aIugWhrFPWNHrNAokZF" type="audio/mpeg">audio not supported</audio>
+
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://arxiv.org/abs/2005.05957" id="FLOWTRON">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis</heading></a><br>
+      <strong>Rafael Valle</strong>, Kevin Shih, Ryan Prenger, Bryan Catanzaro<br>
+      <em>arXiv</em>, 2020<br>
+      <br></p>
+
+      <div class="paper" id="flowtron">
+        <a target="_blank" href="https://arxiv.org/abs/2005.05957">pdf</a> | 
+        <a target="_blank" href="https://nv-adlr.github.io/Flowtron">samples</a> |
+        <a href="javascript:toggleblock('flowtron_abs')">abstract</a>    
+	<p align="justify"> <i id="flowtron_abs">In our recent paper, we
+	  propose Flowtron: an autoregressive flow-based generative network for
+	  text-to-speech synthesis with control over speech variation and style
+	  transfer. Flowtron combines insights from IAF and optimizes Tacotron 2
+	  in order to provide high-quality and controllable mel-spectrogram synthesis.        
+	</i></p>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="33%" valign="top" align="center">
         <img src="https://nv-adlr.github.io/images/mellotron_logo.png" style="width: 200px"></img>
         <audio controls preload="none" style="width: 200px"><source src="http://docs.google.com/uc?export=open&id=1QFWDsrt9-iGY63bpKE-u-V1X5kE1wAvO" type="audio/mpeg">audio not supported</audio>
 
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1910.11997" id="MELLOTRON">
       <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
-      <heading>Mellotron: Multispeaker expressive voice synthesis by conditioning on rhythm, pitch and global style tokens </heading></a><br>
+      <heading>Mellotron: Multispeaker expressive voice synthesis by conditioning on rhythm, pitch and global style tokens</heading></a><br>
       <strong>Rafael Valle*</strong>, Jason Li*, Ryan Prenger, Bryan Catanzaro<br>
       <em>arXiv</em>, 2019<br>
       <br></p>
 
-      <div class="paper" id="waveglow">
+      <div class="paper" id="mellotron">
         <a target="_blank" href="https://arxiv.org/abs/1910.11997">pdf</a> | 
         <a target="_blank" href="https://nv-adlr.github.io/Mellotron">samples</a> |
         <a href="javascript:toggleblock('mellotron_abs')">abstract</a>    
@@ -362,6 +387,9 @@ segments and scores that describe novelty seeking behavior in listeners.
 
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
+</script>
+<script xml:space="preserve" language="JavaScript">
+hideblock('flowtron_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
 hideblock('mellotron_abs');
