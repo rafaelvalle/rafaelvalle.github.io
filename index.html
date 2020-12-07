@@ -4,6 +4,9 @@
 
 <head>
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+
   <style type="text/css">
   /* Design Credits: Deepak Pathak, Jon Barron and Abhishek Kar and Saurabh Gupta*/
   a {
@@ -78,8 +81,10 @@
 
   <tr>
     <td width="67%" valign="middle" align="justify">
-    <p>I'm a senior research scientist at <a target="_blank" href="http://www.nvidia.com/">NVIDIA</a>
-    focusing on audio and computer vision applications.<p>
+    <p>I'm a polymath senior research scientist at <a target="_blank" href="http://www.nvidia.com/">NVIDIA</a>
+    focusing on audio and computer vision applications. I am passionate about generative modeling, 
+    machine perception and machine improvisation.<br>  
+    Normalizing Flows >>> VAEs >>> GANs <p>
     <p>During my PhD at <a target="_blank" href="http://www.berkeley.edu/">UC Berkeley</a> I was
     advised mainly by <a target="_blank"
         href="https://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a> and <a target="_blank"
@@ -100,14 +105,27 @@ segments and scores that describe novelty seeking behavior in listeners.
     
     <p>Before coming to Berkeley, I completed a master's in Computer Music from <a target="_blank" href="https://www.hmdk-stuttgart.de/en/home/">HMDK Stuttgart</a> in Germany and a bachelor's in Orchestral Conducting from <a target="_blank" href="http://www.ufrj.br">UFRJ</a> in Brazil.</p>
 
-    <p align=center>
-    <a target="_blank" href="valle_resume_info_en_nopic_smaller.pdf">CV</a> | 
-    <a target="_blank"href="http://www.linkedin.com/in/vallerafael"> LinkedIn </a>|
-    <a target="_blank" href="http://www.github.com/rafaelvalle"> github </a>
-    </p>
     </td>
 
-    <td width="33%"><a target="_blank" href="images/rafael_valle.png"><img src="images/rafael_valle.png" width="90%"></a></td>
+    <td width="33%"><a target="_blank" href="images/rafael_valle.png"><img src="images/rafael_valle.png" width="90%"></a>
+      <ul class="network-icon" aria-hidden="true" style="text-align: left; padding-left: 5;">
+        <a href="valle_resume_info_en_nopic_smaller.pdf" target="_blank" rel="noopener">
+          <i class="ai ai-cv ai-2x big-icon" style="padding-right:5"></i>
+        </a>
+        <a href="https://twitter.com/rafaelvalleart" target="_blank" rel="noopener">
+          <i class="fab fa-twitter fa-2x big-icon" style="padding-right:5"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?user=SktxU8IAAAAJ&hl" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar ai-2x big-icon" style="padding-right:5"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/vallerafael" target="_blank" rel="noopener">
+          <i class="fab fa-linkedin fa-2x big-icon" style="padding-right:5"></i>
+        </a>
+        <a href="https://github.com/rafaelvalle" target="_blank" rel="noopener">
+          <i class="fab fa-github fa-2x big-icon"></i>
+        </a>
+      </ul>
+    </td>
   </tr>
 </table>
 
@@ -115,10 +133,9 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td>
     <sectionheading>News</sectionheading>
     <ul>     
+    <li> <a href="#KEYWORD">Paper</a> about improving keyword spotting with synthetic speech. </li>
     <li> <a href="#FLOWTRON">Paper</a> about text-to-spectrogram model with more realism and expressivity than current SOTA. </li>
-    <li> <a href="#MELLOTRON">Paper</a> about style transfer and expressive speech syhthesis without expressive training data. </li>
-    <li> <a href="#WAVEGLOW">Paper</a> about high quality and fast speech synthesis from mel-spectrograms.</li>
-
+    <li> <a href="#NEURALODE">Paper</a> about a novel approach for image segmentation combining Neural ODEs and the Level Set method. </li>
     </ul>
   </td></tr>
 </table>
@@ -127,6 +144,23 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td><sectionheading>Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <img src="images/improving_kws.png" style="width: 200px"></img>
+
+    <td width="67%" valign="top">
+      <p>
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Improving Keyword Spotting with Synthetic Speech</heading></a><br>
+      U.  Vaidya, <strong>Rafael Valle</strong>,  M. Jain, U. Ahmed, V. Karandikar, S. S. Chauhan, Bryan Catanzaro<br>
+      <br></p>
+
+      <div class="paper" id="keyword">
+        <a href="javascript:toggleblock('keyword_abs')">abstract</a>    
+	<p align="justify"> <i id="keyword_abs">In this paper we describe a method that uses text-to-speech (TTS) synthesis models to improve the quality of keyword spotting models and to reduce the time and money required to train them. We synthesize varied data from different speakers by combining Flowtron, a multispeaker text-to-mel-spectrogram synthesis model producing speech with high variance, and WaveGlow, a universal mel-spectrogram to audio model. We fine-tune the synthetic data by using QuartzNet, an automatic speech recognition model, to find and remove samples with skipped, repeated and mispronounced words. With this fine-tuned synthetic data and 10% of human data we are able to achieve keyword spotting scores (accuracy and F1) that are comparable to using the full human dataset. We provide results on binary and multiclass Wake-up-Word datasets, including the Speech Commands Dataset.</i></p>
+      </div>
+    </td>
+  </tr>
 
   <tr>
     <td width="33%" valign="top" align="center">
@@ -138,7 +172,7 @@ segments and scores that describe novelty seeking behavior in listeners.
       <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis</heading></a><br>
       <strong>Rafael Valle</strong>, Kevin Shih, Ryan Prenger, Bryan Catanzaro<br>
-      <em>arXiv</em>, 2020<br>
+      <em>arXiv</em> 2019<br>
       <br></p>
 
       <div class="paper" id="flowtron">
@@ -157,15 +191,34 @@ segments and scores that describe novelty seeking behavior in listeners.
 
   <tr>
     <td width="33%" valign="top" align="center">
+      <img src="images/ecssd_0282_contour.png" style="width: 200px"></img>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://arxiv.org/abs/1912.11683" id="NEURALODE">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Neural ODEs for Image Segmentation with Level Sets</heading></a><br>
+      <strong>Rafael Valle</strong>, Fitsum Reda, Mohammad Shoeybi, Patrick Legresley, Andrew Tao, Bryan Catanzaro<br>
+      <em>arXiv</em> 2019<br>
+      <br></p>
+
+      <div class="paper" id="flowtron">
+        <a target="_blank" href="https://arxiv.org/pdf/1912.11683.pdf">pdf</a> | 
+        <a href="javascript:toggleblock('node_abs')">abstract</a>    
+	<p align="justify"> <i id="node_abs">We propose a novel approach for image segmentation that combines Neural Ordinary Differential Equations (NODEs) and the Level Set method.  Our approach parametrizes the evolution of an initial contour with a NODE that implicitly learns from data a speed function describing the evolution.  In addition, for cases where an initial contour is not available and to alleviate the need for careful choice or design of contour embedding functions, we propose a NODE-based method that evolves an image embedding into a dense per-pixel semantic label space. We evaluate our methods on kidney segmentation (KiTS19) and on salient object detection (PASCAL-S, ECSSD and HKU-IS). In addition to improving initial contours provided by deep learning models while using a fraction of their number of parameters, our approach achieves F scores that are higher than several state-of-the-art deep learning algorithms
+	</i></p>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="33%" valign="top" align="center">
         <img src="https://nv-adlr.github.io/images/mellotron_logo.png" style="width: 200px"></img>
         <audio controls preload="none" style="width: 200px"><source src="http://docs.google.com/uc?export=open&id=1QFWDsrt9-iGY63bpKE-u-V1X5kE1wAvO" type="audio/mpeg">audio not supported</audio>
 
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1910.11997" id="MELLOTRON">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Mellotron: Multispeaker expressive voice synthesis by conditioning on rhythm, pitch and global style tokens</heading></a><br>
       <strong>Rafael Valle*</strong>, Jason Li*, Ryan Prenger, Bryan Catanzaro<br>
-      <em>ICASSP</em>, 2020<br>
+      <em>arXiv</em> 2019 - <em>ICASSP</em> 2020<br>
       <br></p>
 
       <div class="paper" id="mellotron">
@@ -184,6 +237,7 @@ segments and scores that describe novelty seeking behavior in listeners.
       </div>
     </td>
   </tr>
+
   <tr>
     <td width="33%" valign="top" align="center">
         <img src="https://nv-adlr.github.io/images/waveglow_logo.png" style="width: 200px"></img>
@@ -191,10 +245,9 @@ segments and scores that describe novelty seeking behavior in listeners.
 
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1811.00002" id="WAVEGLOW">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>WaveGlow: a Flow-based Generative Network for Speech Synthesis</heading></a><br>
       Ryan Prenger, <strong>Rafael Valle</strong>, Bryan Catanzaro<br>
-      <em>ICASSP</em>, 2019<br>
+      <em>ICASSP</em> 2019<br>
       <br></p>
 
       <div class="paper" id="waveglow">
@@ -218,10 +271,9 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://github.com/rafaelvalle/ipgans/"><img src="images/ipgan.png" alt="sym" width="100%" style="border-style: none"></a>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://github.com/rafaelvalle/ipgans/blob/master/latex/ipgans.pdf" id="IPGAN">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>TequilaGAN: How to easily identify GAN samples</heading></a><br>
       <strong>Rafael Valle</strong>, Wilson Cai and Anish Doshi<br>
-      <em>arXiv</em>, 2018<br>
+      <em>arXiv</em> 2018<br>
       <br></p>
 
       <div class="paper" id="ipgan">
@@ -246,10 +298,9 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://github.com/rafaelvalle/asrgen"><img src="images/conf_mat_cnn_knn.png" alt="sym" width="49%" style="border-style: none">&nbsp;<img src="images/pred_comparisson_spk0.png" alt="sym" width="49%" style="border-style: none"></a>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://github.com/rafaelvalle/asrgen/blob/master/main.pdf" id="ASRGEN">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Attacking Speaker Recognition with Deep Generative Models</heading></a><br>
       Anish Doshi, Wilson Cai and <strong>Rafael Valle</strong><br>
-      <em>arXiv</em>, 2017<br>
+      <em>arXiv</em> 2017<br>
 
       <div class="paper" id="asrgen">
       <a target="_blank" href="https://arxiv.org/pdf/1801.02384.pdf">pdf</a> | 
@@ -276,7 +327,6 @@ segments and scores that describe novelty seeking behavior in listeners.
         </iframe>    
     <td width="67%" valign="top">
       <p><a target="_blank" href="http://github.com/rafaelvalle/neural_network_control_improvisation" id="SEQGAN">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Sequence Generation with GANs</heading></a><br>
       <strong>Rafael Valle</strong><br>
       2017
@@ -297,8 +347,8 @@ segments and scores that describe novelty seeking behavior in listeners.
       <p><a target="_blank" href="https://github.com/rafaelvalle/machine_listening" id="ABROA">
       <heading>Audio-Based Room Occupancy Analysis using Gaussian Mixtures and Hidden Markov Models</heading></a><br>
       <strong>Rafael Valle</strong><br>
-      <em>Future Technologies Conference (FTC)</em>, 2016<br>
-      <em>Detection and Classification of Acoustic Scenes and Events </em>, 2016
+      <em>Future Technologies Conference (FTC)</em> 2016<br>
+      <em>Detection and Classification of Acoustic Scenes and Events </em> 2016
       <br></p>
 
       <div class="paper" id="abroa">
@@ -328,7 +378,7 @@ segments and scores that describe novelty seeking behavior in listeners.
       <p><a target="_blank" href="https://github.com/rafaelvalle/mdi" id="MDI">
       <heading>Missing Data Imputation for Supervised Classification</heading></a><br>
       Jason Poulos and <strong>Rafael Valle</strong><br>
-      <em>Applied Artificial Intelligence</em>, 2018
+      <em>Applied Artificial Intelligence</em> 2018
       <br></p>
 
       <div class="paper" id="mdi">
@@ -360,7 +410,7 @@ segments and scores that describe novelty seeking behavior in listeners.
           href="https://github.com/rafaelvalle/music_pattern_graphs" id="PATTGRAPH">
       <heading>Learning and Visualizing Music Specifications using Pattern Graphs</heading></a><br>
       <strong>Rafael Valle</strong>, Daniel Fremont, Ilge Akkaya, Alexandre Donze, Adrian Freed and Sanjit Seshia<br>
-      <em>ISMIR</em>, 2016
+      <em>ISMIR</em> 2016
       <br></p>
 
       <div class="paper" id="pattgraph">
@@ -389,7 +439,13 @@ segments and scores that describe novelty seeking behavior in listeners.
 hideallbibs();
 </script>
 <script xml:space="preserve" language="JavaScript">
+hideblock('keyword_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
 hideblock('flowtron_abs');
+</script>
+<script xml:space="preserve" language="JavaScript">
+hideblock('node_abs');
 </script>
 <script xml:space="preserve" language="JavaScript">
 hideblock('mellotron_abs');
