@@ -81,10 +81,11 @@
 
   <tr>
     <td width="67%" valign="middle" align="justify">
-    <p>I'm a polymath senior research scientist at <a target="_blank" href="http://www.nvidia.com/">NVIDIA</a>
-    focusing on audio and computer vision applications. I am passionate about generative modeling, 
-    machine perception and machine improvisation.<br>  
-    Normalizing Flows >>> VAEs >>> GANs <p>
+    <p>I'm a polymath senior research scientist and manager at <a target="_blank" href="http://www.nvidia.com/">NVIDIA</a>,
+    where I represent ADLR's (Applied Deep Learning Research) audio team. ADLR-Audio focuses on generative models for audio and text, with an emphasis in audio understanding and audio synthesis. 
+    
+    <p>I am passionate about generative modeling, machine perception and machine improvisation. Over the years, I have had the opportunity to collaborate with fantastic researchers and co-invent <a href="#PFLOW">P-Flow</a>, the <a href="#RADMMM">RAD*</a> family of models with the <a href="#OTA">One Aligner To Rule Them All</a>, <a href="#FLOWTRON">Flowtron</a> and <a href="#WAVEGLOW">WaveGlow</a>.<br>
+
     <p>During my PhD at <a target="_blank" href="http://www.berkeley.edu/">UC Berkeley</a> I was
     advised mainly by <a target="_blank"
         href="https://people.eecs.berkeley.edu/~sseshia/">Prof. Sanjit Seshia</a> and <a target="_blank"
@@ -133,9 +134,11 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td>
     <sectionheading>News</sectionheading>
     <ul>     
-    <li> <a href="#KEYWORD">Paper</a> about improving keyword spotting with synthetic speech. </li>
-    <li> <a href="#FLOWTRON">Paper</a> about text-to-spectrogram model with more realism and expressivity than current SOTA. </li>
-    <li> <a href="#NEURALODE">Paper</a> about a novel approach for image segmentation combining Neural ODEs and the Level Set method. </li>
+    <li> <a href="#PFLOW">Paper</a> about SOTA, fast and data-efficient flow-matching based zero-shot TTS through speech prompting</li>
+    <li> <a href="#RADMMM">RADMMM (VANI)</a> stood 1st in terms of speaker identity retention and 2nd in terms of overall MOS at <a target="_blank" href="https://sites.google.com/view/syspinttschallenge2023/leaderboard/main-leaderboard">ICASSP's Signal Processing Grand Challenge (LIMMITS 2023).</a></li>
+    <li> <a href="#SELFVC">Paper</a> about voice conversion with iterative refinement using self transformations</li>
+    <li> <a href="#SPACE">Paper</a> about speech-driven Portrait Animation with Controllable Expression</li>
+    
     </ul>
   </td></tr>
 </table>
@@ -145,14 +148,339 @@ segments and scores that describe novelty seeking behavior in listeners.
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://pflow-demo.github.io/projects/pflow/"><img src="https://pflow-demo.github.io/projects/pflow/images/pflow/pflow-architecture.png" alt="sym" width="75%" style="border-style: none"></a><br>
+    reference<audio controls preload="none" style="width: 200px; height: 30px"><source src="https://drive.google.com/uc?export=open&amp;id=1YfMwSiXwOJzAgYE_3otR-i045Wm8H-jt" type="audio/mpeg" />audio not supported</audio><br>
+    P-Flow<audio controls preload="none" style="width: 200px; height: 30px">><source src="https://drive.google.com/uc?export=open&amp;id=1JjmFc8kBu99WgczZdXStxefn98gUNLN2" type="audio/mpeg" />audio not supported</audio>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://pflow-demo.github.io/projects/pflow/" id="PFLOW">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>P-Flow: A Fast and Data-Efficient Zero-Shot TTS through Speech Prompting</heading></a><br>
+      Sungwon Kim, Kevin Shih, Rohan Badlani, Joao Felipe Santos, Evelina Bakhturina, Mikyas Desta, <strong>Rafael Valle</strong>, Sungroh Yoon, Bryan Catanzaro<br>
+      <em>NEURIPS</em> 2023
+      <br></p>
+
+      <div class="paper" id="pflow">
+        <a target="_blank" href="https://neurips.cc/virtual/2023/poster/69899">pdf</a> |
+        <a href="javascript:toggleblock('pflow_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('pflow')" class="togglebib">bibtex</a>
+
+        <p align="justify"> <i id="pflow_abs">While recent large-scale neural codec language models have shown significant improvement in zero-shot TTS by training on thousands of hours of data, they suffer from drawbacks such as a lack of robustness, slow sampling speed similar to previous autoregressive TTS methods, and reliance on pre-trained neural codec representations. Our work proposes P-Flow, a fast and data-efficient zero-shot TTS model that uses speech prompts for speaker adaptation. P-Flow comprises a speech-prompted text encoder for speaker adaptation and a flow matching generative decoder for high-quality and fast speech synthesis. Our speech-prompted text encoder uses speech prompts and text input to generate speaker-conditional text representation. The flow matching generative decoder uses the speaker-conditional output to synthesize high-quality personalized speech significantly faster than in real-time. Unlike the neural codec language models, we specifically train P-Flow on LibriTTS dataset using a continuous mel-representation. Through our training method using continuous speech prompts, P-Flow matches the speaker similarity performance of the large-scale zero-shot TTS models with two orders of magnitude less training data and has more than 20$\times$ faster sampling speed. Our results show that P-Flow has better pronunciation and is preferred in human likeness and speaker similarity to its recent state-of-the-art counterparts, thus defining P-Flow as an attractive and desirable alternative.</i></p>
+
+        <pre xml:space="preserve">
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/adlr/projects/radmmm/"><img src="https://research.nvidia.com/labs/adlr/images/radmmm/radmmm_overview.png" alt="sym" width="75%" style="border-style: none"></a><br>    
+    Seen (French) <audio controls="" preload="none" style="width: 200px; height: 30px"><source src="http://docs.google.com/uc?export=open&amp;id=1kzJBE8QU8PHY6OhJwFXM_jSJtX8dkHxU" type="audio/mpeg"/>audio not supported</audio><br>
+    Unseen (German) <audio controls="" preload="none" style="width: 200px; height: 30px"><source src="http://docs.google.com/uc?export=open&amp;id=1W6p3sbYeky3ApjdVV077_9PMXtk_dx_U" type="audio/mpeg"/>audio not supported</audio><br>
+    Unseen (Hindi) <audio controls="" preload="none" style="width: 200px; height: 30px"><source src="http://docs.google.com/uc?export=open&amp;id=1fG2R04rPLlQYzEmg6cgKE-nywAg1JIAL" type="audio/mpeg"/>audio not supported</audio><br>
+    Unseen (Spanish) <audio controls="" preload="none" style="width: 200px; height: 30px"><source src="http://docs.google.com/uc?export=open&amp;id=19qw9EC0IYPvFaVVwBJg2HOb9vIjMMFuS" type="audio/mpeg"/>audio not supported</audio><br>
+    
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/projects/radmmm/" id="RADMMM">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>RADMMM: Multilingual Multiaccented Multispeaker Text-to-Speech</heading></a><br>
+      Rohan Badlani, <strong>Rafael Valle</strong>, Kevin J. Shih, João Felipe Santos, Siddhart Gururani, Bryan Catanzaro<br>
+      <em>Interspeech</em> 2023
+      <br></p>
+
+      <div class="paper" id="radmmm">
+      <a target="_blank" href="https://www.isca-speech.org/archive/pdfs/interspeech_2023/badlani23_interspeech.pdf">pdf</a> |
+      <a href="javascript:toggleblock('radmmm_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('radmmm')" class="togglebib">bibtex</a> |
+      <a target="_blank" href="https://arxiv.org/abs/2301.10335">arXiv</a> |
+      <a target="_blank" href="https://github.com/nvidia/rad-mmm">code</a>
+
+      <p align="justify"> <i id="radmmm_abs">We work to create a multilingual speech synthesis system which can generate speech with the proper accent while retaining the characteristics of an individual voice. This is challenging to do because it is expensive to obtain bilingual training data in multiple languages, and the lack of such data results in strong correlations that entangle speaker, language, and accent, resulting in poor transfer capabilities. To overcome this, we present a multilingual, multiaccented, multispeaker speech synthesis model based on RADTTS with explicit control over accent, language, speaker and fine-grained F0 and energy features. Our proposed model does not rely on bilingual training data. We demonstrate an ability to control synthesized accent for any speaker in an open-source dataset comprising of 7 accents. Human subjective evaluation demonstrates that our model can better retain a speaker's voice and accent quality than controlled baselines while synthesizing fluent speech in all target languages and accents in our dataset.
+</i></p>
+
+      <pre xml:space="preserve">
+      @inproceedings{badlani23_interspeech,
+        author={Rohan Badlani and Rafael Valle and Kevin J. Shih and João Felipe Santos and Siddharth Gururani and Bryan Catanzaro},
+        title={{RAD-MMM: Multilingual Multiaccented Multispeaker Text To Speech}},
+        year=2023,
+        booktitle={Proc. INTERSPEECH 2023},
+        pages={626--630},
+        doi={10.21437/Interspeech.2023-2330}
+      }
+      </pre>
+      </div>
+    </td>
+  </tr>  
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://selfspeechsynthesis.github.io/"><img src="images/selfvc.png" alt="sym" width="75%" style="border-style: none"></a><br>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://selfspeechsynthesis.github.io/" id="SELFVC">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>SelfVC: Voice Conversion With Iterative Refinement using Self Transformations</heading></a><br>
+      Paarth Neekhara, Shehzeen Hussain, <strong>Rafael Valle</strong>, Boris Ginsburg, Rishabh Ranjan, Shlomo Dubnov, Farinaz Koushanfar, Julian McAuley<br>
+      <em>Under Review ICLR</em> 2024
+      <br></p>
+
+      <div class="paper" id="pflow">
+        <a target="_blank" href="https://openreview.net/pdf/38cba2cbfd9b77e0e8c337408b64f027ed5af12c.pdf">pdf</a> |
+        <a href="javascript:toggleblock('selfvc_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('selfvc')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://arxiv.org/abs/2310.09653v1">arXiv</a>
+        <p align="justify"> <i id="selfvc_abs">We propose SelfVC, a training strategy to iteratively improve a voice conversion model with self-synthesized examples. Previous efforts on voice conversion focus on explicitly disentangling speech representations to separately encode speaker characteristics and linguistic content. However, disentangling speech representations to capture such attributes using task-specific loss terms can lead to information loss by discarding finer nuances of the original signal. In this work, instead of explicitly disentangling attributes with loss terms, we present a framework to train a controllable voice conversion model on entangled speech representations derived from self-supervised learning and speaker verification models. First, we develop techniques to derive prosodic information from the audio signal and SSL representations to train predictive submodules in the synthesis model. Next, we propose a training strategy to iteratively improve the synthesis model for voice conversion, by creating a challenging training objective using self-synthesized examples. In this training approach, the current state of the synthesis model is used to generate voice-converted variations of an utterance, which serve as inputs for the reconstruction task, ensuring a continuous and purposeful refinement of the model. We demonstrate that incorporating such self-synthesized examples during training improves the speaker similarity of generated speech as compared to a baseline voice conversion model trained solely on heuristically perturbed inputs. SelfVC is trained without any text and is applicable to a range of tasks such as zero-shot voice conversion, cross-lingual voice conversion, and controllable speech synthesis with pitch and pace modifications. SelfVC achieves state-of-the-art results in zero-shot voice conversion on metrics evaluating naturalness, speaker similarity, and intelligibility of synthesized audio.</i></p>
+
+        <pre xml:space="preserve">
+        </pre>
+      </div>
+    </td>
+  </tr>      
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/dir/space/"><img src="https://research.nvidia.com/labs/dir/space/data/method/overview.png" alt="sym" width="75%" style="border-style: none"></a>
+    <iframe width="186" height="104" src="https://www.youtube.com/embed/DdCvJ8JI2-M?si=zugEVrxq6tsX_LwJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/dir/space/" id="SPACE">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>SPACE: Speech-driven Portrait Animation with Controllable Expression</heading></a><br>
+      Siddharth Gururani, Arun Mallya, Ting-Chun Wang, <strong>Rafael Valle</strong>, Ming-Yu Liu<br>
+      <em>ICCV</em> 2023
+      <br></p>
+
+      <div class="paper" id="space">
+      <a target="_blank" href="https://arxiv.org/pdf/2211.09809.pdf">pdf</a> |
+      <a href="javascript:toggleblock('space_abs')">abstract</a> |
+      <a shape="rect" href="javascript:togglebib('space')" class="togglebib">bibtex</a> |
+      <a target="_blank" href="https://arxiv.org/abs/2211.09809">arXiv</a>
+
+      <p align="justify"> <i id="space_abs">Animating portraits using speech has received growing attention in recent years, with various creative and practical use cases. An ideal generated video should have good lip sync with the audio, natural facial expressions and head motions, and high frame quality. In this work, we present SPACE, which uses speech and a single image to generate high-resolution, and expressive videos with realistic head pose, without requiring a driving video. It uses a multi-stage approach, combining the controllability of facial landmarks with the high-quality synthesis power of a pretrained face generator. SPACE also allows for the control of emotions and their intensities. Our method outperforms prior methods in objective metrics for image quality and facial motions and is strongly preferred by users in pair-wise comparisons.</i></p>
+
+      <pre xml:space="preserve">
+      @inproceedings{gururani2023space,
+        title={SPACE: Speech-driven Portrait Animation with Controllable Expression},
+        author={Gururani, Siddharth and Mallya, Arun and Wang, Ting-Chun and Valle, Rafael and Liu, Ming-Yu},
+        booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+        pages={20914--20923},
+        year={2023}
+      }
+      </pre>
+      </div>
+    </td>
+  </tr>    
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/"><img src="images/radpp.png" alt="sym" width="75%" style="border-style: none"></a>
+    <audio controls preload="none" style="height:30px;width:200px"><source src="http://docs.google.com/uc?export=open&id=1f85rgFrKDrSkq_V52cpgXSROtje6IWI1" type="audio/mpeg">audio not supported</audio></center>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/" id="RADPP">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>High-Acoustic Fidelity Text To Speech Synthesis With Fine-Grained Control Of Speech Attributes</heading></a><br>
+      <strong>Rafael Valle</strong>, João Felipe Santos, Kevin J. Shih, Rohan Badlani, Bryan Catanzaro<br>
+      <em>ICASSP</em> 2023
+      <br></p>
+
+      <div class="paper" id="radpp">
+        <a target="_blank" href="https://ieeexplore.ieee.org/document/10096279">pdf</a> |
+        <a href="javascript:toggleblock('radpp_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('radpp')" class="togglebib">bibtex</a> |      
+        <a target="_blank" href="https://github.com/nvidia/radtts">code</a>
+
+        <p align="justify"> <i id="radpp_abs">Recently developed neural-based TTS models have focused on robustness and finer control over acoustic features such as phoneme duration, energy, and F0, allowing users to have some degree of control over the prosody of the generated speech. We propose a model with fine grained attribute control, which also has better acoustic fidelity (attributes of the output which we want to control do not deviate from the control signals) than previously proposed models as shown in our experiments 1 . Unlike other models, our proposed model does not require fine-tuning the vocoder on its outputs, indicating that it generates higher quality mel-spectrograms that are closer to the ground-truth distribution than that of other models.</i></p>
+
+        <pre xml:space="preserve">
+        @inproceedings{valle2023high,
+          title={High-Acoustic Fidelity Text To Speech Synthesis With Fine-Grained Control Of Speech Attributes},
+          author={Valle, Rafael and Santos, Jo{\~a}o Felipe and Shih, Kevin J and Badlani, Rohan and Catanzaro, Bryan},
+          booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+          pages={1--5},
+          year={2023},
+          organization={IEEE}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://ieeexplore.ieee.org/document/10096220"><img src="images/anytoanyvc.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://ieeexplore.ieee.org/document/10096220" id="ANYTOANY">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Any-to-Any Voice Conversion with F0 and Timbre Disentanglement and Novel Timbre Conditioning</heading></a><br>
+      Sudheer Kovela, <strong>Rafael Valle</strong>, Ambrish Dantrey, Bryan Catanzaro<br>
+      <em>ICASSP</em> 2023
+      <br></p>
+
+      <div class="paper" id="anytoany">
+        <a target="_blank" href="https://ieeexplore.ieee.org/document/10096220">pdf</a> |
+        <a href="javascript:toggleblock('anytoany_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('anytoany')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="anytoany_abs">Despite recent advances in voice conversion (VC), it is still challenging to do real-time one-shot voice conversion with good control over timbre and F0. In this work, we present a PPG-based VC model that directly decodes waveforms. We designed a speaker conditioned decoder based on HiFi-GAN, along with a new discriminator that produces high quality audio. Using an F0 prenet and F0 augmented speaker encoder, we are able to control F0 and timbre independently with high fidelity. Our objective and subjective evaluations show that our method is preferred over others in terms of audio quality, timbre similarity and prosody retention.</i></p>
+
+        <pre xml:space="preserve">
+        @inproceedings{kovela2023any,
+          title={Any-to-Any Voice Conversion with F 0 and Timbre Disentanglement and Novel Timbre Conditioning},
+          author={Kovela, Sudheer and Valle, Rafael and Dantrey, Ambrish and Catanzaro, Bryan},
+          booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+          pages={1--5},
+          year={2023},
+          organization={IEEE}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/adlr/projects/radmmm/"><img src="images/vani.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/projects/radmmm/" id="VANI">
+      <heading>VANI: Very-lightweight Accent-controllable TTS for Native and Non-native speakers with Identity Preservation</heading></a><br>
+      Rohan Badlani, Ashish Arora, Subhankar Ghosh, <strong>Rafael Valle</strong>, Kevin J. Shih, João Felipe Santos, Boris Ginsburg, Bryan Catanzaro<br>
+      <em>ICASSP</em> 2023
+      <br></p>
+
+      <div class="paper" id="vani">
+        <a target="_blank" href="https://arxiv.org/pdf/2303.07578.pdf">pdf</a> |
+        <a href="javascript:toggleblock('vani_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('vani')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://arxiv.org/abs/2303.07578">arXiv</a> |
+        <a target="_blank" href="https://github.com/nvidia/radmmm">code</a>
+
+        <p align="justify"> <i id="vani_abs">We introduce VANI, a very lightweight multi-lingual accent controllable speech synthesis system. Our model builds upon disentanglement strategies proposed in RADMMM and supports explicit control of accent, language, speaker and fine-grained F0 and energy features for speech synthesis. We utilize the Indic languages dataset, released for LIMMITS 2023 as part of ICASSP Signal Processing Grand Challenge, to synthesize speech in 3 different languages. Our model supports transferring the language of a speaker while retaining their voice and the native accent of the target language. We utilize the large-parameter RADMMM model for Track 1 and lightweight VANI model for Track 2 and 3 of the competition.</i></p>
+
+        <pre xml:space="preserve">
+        @inproceedings{badlani2023vani,
+          title={VANI: Very-lightweight Accent-controllable TTS for Native and Non-native speakers with Identity Preservation},
+          author={Badlani, Rohan and Arora, Akshit and Ghosh, Subhankar and Valle, Rafael and Shih, Kevin J and Santos, Jo{\~a}o Felipe and Ginsburg, Boris and Catanzaro, Bryan},
+          booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+          pages={1--2},
+          year={2023},
+          organization={IEEE}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/adlr/one-tts-alignment/"><img src="https://research.nvidia.com/labs/adlr/images/onetts_alignment_model.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/one-tts-alignment/" id="OTA">
+      <heading>One TTS Alignment to Rule Them All</heading></a><br>
+      Rohan Badlani, Adrian Łańcucki, Kevin J. Shih, <strong>Rafael Valle</strong><br>
+      <em>ICASSP</em> 2022
+      <br></p>
+
+      <div class="paper" id="ota">
+        <a target="_blank" href="https://arxiv.org/pdf/2108.10447.pdf">pdf</a> |
+        <a href="javascript:toggleblock('ota_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('ota')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://arxiv.org/abs/2108.10447">arXiv</a> |
+        <a target="_blank" href="https://github.com/nvidia/radtts">code</a>
+
+        <p align="justify"> <i id="ota_abs">Speech-to-text alignment is a critical component of neural text-to-speech (TTS) models. Autoregressive TTS models typically use an attention mechanism to learn these alignments on-line. However, these alignments tend to be brittle and often fail to generalize to long utterances and out-of-domain text, leading to missing or repeating words. Most non-autoregressive end-to-end TTS models rely on durations extracted from external sources. In this paper we leverage the alignment mechanism proposed in RAD-TTS and demonstrate its applicability to wide variety of neural TTS models. The alignment learning framework combines the forward-sum algorithm, Viterbi algorithm, and an efficient static prior. In our experiments, the framework improves all tested TTS architectures, both autoregressive (Flowtron, Tacotron 2) and non-autoregressive (FastPitch, FastSpeech 2, RAD-TTS). Specifically, it improves alignment convergence speed, simplifies the training pipeline by eliminating need for external aligners, enhances robustness to errors on long utterances and improves the perceived speech synthesis quality, as judged by human evaluators.</i></p>
+
+        <pre xml:space="preserve">
+        @inproceedings{badlani2022one,
+          title={One TTS alignment to rule them all},
+          author={Badlani, Rohan and {\L}a{\'n}cucki, Adrian and Shih, Kevin J and Valle, Rafael and Ping, Wei and Catanzaro, Bryan},
+          booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+          pages={6092--6096},
+          year={2022},
+          organization={IEEE}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/"><img src="https://research.nvidia.com/labs/adlr/images/radtts_logo.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/" id="GML">
+      <heading>Generative modeling for low dimensional speech attributes with neural spline flows</heading></a><br>
+      Kevin J. Shih, <strong>Rafael Valle</strong>, Rohan Badlani, Bryan Catanzaro<br>
+      <em>arXiv</em> 2022
+      <br></p>
+
+      <div class="paper" id="gml">
+        <a target="_blank" href="https://arxiv.org/pdf/2203.01786.pdf">pdf</a> |
+        <a href="javascript:toggleblock('gml_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('gml')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://arxiv.org/abs/2203.01786">arXiv</a> |
+        <a target="_blank" href="https://github.com/nvidia/radtts">code</a>
+
+        <p align="justify"> <i id="gml_abs">Despite recent advances in generative modeling for text-to-speech synthesis, these models do not yet have the same fine-grained adjustability of pitch-conditioned deterministic models such as FastPitch and FastSpeech2. Pitch information is not only low-dimensional, but also discontinuous, making it particularly difficult to model in a generative setting. Our work explores several techniques for handling the aforementioned issues in the context of Normalizing Flow models. We also find this problem to be very well suited for Neural Spline flows, which is a highly expressive alternative to the more common affine-coupling mechanism in Normalizing Flows.</i></p>
+
+        <pre xml:space="preserve">
+        @article{shih2022generative,
+          title={Generative modeling for low dimensional speech attributes with neural spline flows},
+          author={Shih, Kevin J and Valle, Rafael and Badlani, Rohan and Santos, Jo{\~a}o Felipe and Catanzaro, Bryan},
+          journal={arXiv preprint arXiv:2203.01786},
+          year={2022}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/"><img src="https://research.nvidia.com/labs/adlr/images/radtts_logo.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/" id="RADTTS">
+      <heading>RAD-TTS: Parallel flow-based TTS with robust alignment learning and diverse synthesis</heading></a><br>
+      Kevin J. Shih, <strong>Rafael Valle</strong>, Rohan Badlani, Adrian Lancucki, Wei Ping, Bryan Catanzaro<br>
+      <em>ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models</em> 2021
+      <br></p>
+
+      <div class="paper" id="radtts">
+        <a target="_blank" href="https://openreview.net/pdf?id=0NQwnnwAORi">pdf</a> |
+        <a href="javascript:toggleblock('radtts_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('radtts')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://github.com/nvidia/radtts">code</a>
+        <p align="justify"> <i id="radtts_abs">This work introduces a predominantly parallel, end-to-end TTS model based on normalizing flows. It extends prior parallel approaches by additionally modeling speech rhythm as a separate generative distribution to facilitate variable token duration during inference. We further propose a robust framework for the on-line extraction of speech-text alignments – a critical yet highly unstable learning problem in end-to-end TTS frameworks. Our experiments demonstrate that our proposed techniques yield improved alignment quality, better output diversity compared to controlled baselines.</i></p>
+
+        <pre xml:space="preserve">
+        @inproceedings{shih2021rad,
+          title={RAD-TTS: Parallel flow-based TTS with robust alignment learning and diverse synthesis},
+          author={Shih, Kevin J and Valle, Rafael and Badlani, Rohan and Lancucki, Adrian and Ping, Wei and Catanzaro, Bryan},
+          booktitle={ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models},
+          year={2021}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://arxiv.org/pdf/1712.04046.pdf"><img src="images/cbh.png" alt="sym" width="75%" style="border-style: none"></a>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://arxiv.org/pdf/1712.04046.pdf" id="CBH">
+      <heading>Character-based handwritten text transcription with attention networks</heading></a><br>
+      Jason Poulos and <strong>Rafael Valle</strong><br>
+      <em>Neural Computing and Applications</em> 2021
+      <br></p>
+
+      <div class="paper" id="cbh">
+        <a target="_blank" href="https://link.springer.com/article/10.1007/s00521-021-05813-1">pdf</a> |
+        <a href="javascript:toggleblock('cbh_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('cbh')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://arxiv.org/abs/1712.04046">arXiv</a> |      
+        <p align="justify"> <i id="cbh_abs">The paper approaches the task of handwritten text recognition (HTR) with attentional encoder-decoder networks trained on sequences of characters, rather than words. We experiment on lines of text from popular handwriting datasets and compare different activation functions for the attention mechanism used for aligning image pixels and target characters. We find that softmax attention focuses heavily on individual characters, while sigmoid attention focuses on multiple characters at each step of the decoding. When the sequence alignment is one-to-one, softmax attention is able to learn a more precise alignment at each step of the decoding, whereas the alignment generated by sigmoid attention is much less precise. When a linear function is used to obtain attention weights, the model predicts a character by looking at the entire sequence of characters and performs poorly because it lacks a precise alignment between the source and target. Future research may explore HTR in natural scene images, since the model is capable of transcribing handwritten text without the need for producing segmentations or bounding boxes of text in images.</i></p>
+
+        <pre xml:space="preserve">
+        @article{poulos2021character,
+          title={Character-based handwritten text transcription with attention networks},
+          author={Poulos, Jason and Valle, Rafael},
+          journal={Neural Computing and Applications},
+          volume={33},
+          number={16},
+          pages={10563--10573},
+          year={2021},
+          publisher={Springer}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  <tr>
     <td width="33%" valign="top" align="center">
       <img src="images/improving_kws.png" style="width: 200px"></img>
 
     <td width="67%" valign="top">
       <p>
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Improving Keyword Spotting with Synthetic Speech</heading></a><br>
-      U.  Vaidya, <strong>Rafael Valle</strong>,  M. Jain, U. Ahmed, V. Karandikar, S. S. Chauhan, Bryan Catanzaro<br>
+      U.  Vaidya, <strong>Rafael Valle</strong>, M. Jain, U. Ahmed, V. Karandikar, S. S. Chauhan, Bryan Catanzaro<br>
       <br></p>
 
       <div class="paper" id="keyword">
@@ -169,22 +497,21 @@ segments and scores that describe novelty seeking behavior in listeners.
 
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/2005.05957" id="FLOWTRON">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
-      <heading>Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis</heading></a><br>
-      <strong>Rafael Valle</strong>, Kevin Shih, Ryan Prenger, Bryan Catanzaro<br>
-      <em>arXiv</em> 2019<br>
-      <br></p>
+         <heading>Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis</heading></a><br>
+         <strong>Rafael Valle</strong>, Kevin Shih, Ryan Prenger, Bryan Catanzaro<br>
+         <em>arXiv</em> 2019 - <em>ICLR</em> 2020<br>
+         <br></p>
 
       <div class="paper" id="flowtron">
         <a target="_blank" href="https://arxiv.org/abs/2005.05957">pdf</a> | 
         <a target="_blank" href="https://nv-adlr.github.io/Flowtron">samples</a> |
         <a href="javascript:toggleblock('flowtron_abs')">abstract</a>    
-	<p align="justify"> <i id="flowtron_abs">In our recent paper, we
-	  propose Flowtron: an autoregressive flow-based generative network for
-	  text-to-speech synthesis with control over speech variation and style
-	  transfer. Flowtron combines insights from IAF and optimizes Tacotron 2
-	  in order to provide high-quality and controllable mel-spectrogram synthesis.        
-	</i></p>
+      	<p align="justify"> <i id="flowtron_abs">In our recent paper, we
+      	  propose Flowtron: an autoregressive flow-based generative network for
+      	  text-to-speech synthesis with control over speech variation and style
+      	  transfer. Flowtron combines insights from IAF and optimizes Tacotron 2
+      	  in order to provide high-quality and controllable mel-spectrogram synthesis.        
+      	</i></p>
       </div>
     </td>
   </tr>
@@ -194,7 +521,6 @@ segments and scores that describe novelty seeking behavior in listeners.
       <img src="images/ecssd_0282_contour.png" style="width: 200px"></img>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1912.11683" id="NEURALODE">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Neural ODEs for Image Segmentation with Level Sets</heading></a><br>
       <strong>Rafael Valle</strong>, Fitsum Reda, Mohammad Shoeybi, Patrick Legresley, Andrew Tao, Bryan Catanzaro<br>
       <em>arXiv</em> 2019<br>
@@ -352,22 +678,22 @@ segments and scores that describe novelty seeking behavior in listeners.
       <br></p>
 
       <div class="paper" id="abroa">
-      <a target="_blank" href="https://arxiv.org/pdf/1607.07801.pdf">pdf</a> |
-      <a href="javascript:toggleblock('abroa_abs')">abstract</a> |
-      <a shape="rect" href="javascript:togglebib('abroa')" class="togglebib">bibtex</a> |
-      <a target="_blank" href="https://arxiv.org/abs/1607.07801">arXiv</a> |
-      <a target="_blank" href="https://github.com/rafaelvalle/machine_listening">code</a>
+        <a target="_blank" href="https://arxiv.org/pdf/1607.07801.pdf">pdf</a> |
+        <a href="javascript:toggleblock('abroa_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('abroa')" class="togglebib">bibtex</a> |
+        <a target="_blank" href="https://arxiv.org/abs/1607.07801">arXiv</a> |
+        <a target="_blank" href="https://github.com/rafaelvalle/machine_listening">code</a>
 
-      <p align="justify"> <i id="abroa_abs">This paper outlines preliminary steps towards the development of an audio based room-occupancy analysis model. Our approach borrows from speech recognition tradition and is based on Gaussian Mixtures and Hidden Markov Models. We analyze possible challenges encountered in the development of such a model, and offer several solutions including feature design and prediction strategies. We provide results obtained from experiments with audio data from a retail store in Palo Alto, California. Model assessment is done via leave-two-out Bootstrap and model convergence achieves good accuracy, thus representing a contribution to multimodal people counting algorithms.</i></p>
+        <p align="justify"> <i id="abroa_abs">This paper outlines preliminary steps towards the development of an audio based room-occupancy analysis model. Our approach borrows from speech recognition tradition and is based on Gaussian Mixtures and Hidden Markov Models. We analyze possible challenges encountered in the development of such a model, and offer several solutions including feature design and prediction strategies. We provide results obtained from experiments with audio data from a retail store in Palo Alto, California. Model assessment is done via leave-two-out Bootstrap and model convergence achieves good accuracy, thus representing a contribution to multimodal people counting algorithms.</i></p>
 
-      <pre xml:space="preserve">
-      @article{valle2016abroa,
-        title={ABROA: Audio-Based Room-Occupancy Analysis using Gaussian Mixtures and Hidden Markov Models},
-        author={Valle, Rafael},
-        journal={arXiv preprint arXiv:1607.07801},
-        year={2016}
-      }
-      </pre>
+        <pre xml:space="preserve">
+        @article{valle2016abroa,
+          title={ABROA: Audio-Based Room-Occupancy Analysis using Gaussian Mixtures and Hidden Markov Models},
+          author={Valle, Rafael},
+          journal={arXiv preprint arXiv:1607.07801},
+          year={2016}
+        }
+        </pre>
       </div>
     </td>
   </tr>
@@ -400,10 +726,7 @@ segments and scores that describe novelty seeking behavior in listeners.
       </pre>
       </div>
     </td>
-  </tr>  
-
-
-  <tr>
+  </tr>    <tr>
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://github.com/rafaelvalle/music_pattern_graphs"><img src="images/pattgraph.png" alt="sym" width="75%" style="border-style: none"></a>
     <td width="67%" valign="top">
       <p><a target="_blank"
@@ -438,39 +761,29 @@ segments and scores that describe novelty seeking behavior in listeners.
 <script xml:space="preserve" language="JavaScript">
 hideallbibs();
 </script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('keyword_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('flowtron_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('node_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('mellotron_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('waveglow_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('asrgen_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('ipgan_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('abroa_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('seqgan_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('mdi_abs');
-</script>
-<script xml:space="preserve" language="JavaScript">
-hideblock('pattgraph_abs');
-</script>
+
+<script xml:space="preserve" language="JavaScript">hideblock('pflow_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('selfvc_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('radpp_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('anytoany_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('space_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('vani_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('radmmm_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('ota_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('gml_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('cbh_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('radtts_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('keyword_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('flowtron_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('node_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('mellotron_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('waveglow_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('asrgen_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('ipgan_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('abroa_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('seqgan_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('mdi_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('pattgraph_abs') </script>
 </body>
 
 </html>
