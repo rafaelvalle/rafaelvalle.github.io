@@ -89,10 +89,10 @@
     
     <p>I am passionate about generative modeling, machine perception and machine
     improvisation. Over the years, I have had the opportunity to collaborate
-    with fantastic researchers and co-invent <a href="#PFLOW">P-Flow</a>, 
-    the <a href="#RADMMM">RAD*</a> family of models with the 
-    <a href="#OTA">One Aligner To Rule Them All</a>, 
-    <a href="#FLOWTRON">Flowtron</a> and <a href="#WAVEGLOW">WaveGlow</a>.<br>
+    with fantastic researchers and co-invent <a href="#AUDIOFLAMINGO">Audio Flamingo</a>, 
+    <a href="#PFLOW">P-Flow</a>, the <a href="#RADMMM">RAD*</a> family of models
+    with the <a href="#OTA">One Aligner To Rule Them All</a>, <a
+    href="#FLOWTRON">Flowtron</a> and <a href="#WAVEGLOW">WaveGlow</a>.<br>
 
     <p>During my PhD at <a target="_blank" href="http://www.berkeley.edu/">UC Berkeley</a> I was
     advised mainly by <a target="_blank"
@@ -132,14 +132,15 @@ segments and scores that describe novelty seeking behavior in listeners.
           <i class="fab fa-github fa-2x big-icon"></i>
         </a>
       </ul>
-    </td>
-  </tr>
+    </td> </tr>
 </table>
 
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tr><td>
     <sectionheading>News</sectionheading>
     <ul>     
+    <li> <a href="#AUDIO FLAMINGO">Paper</a> about SOTA, audio language model with few-shot learning and multi-turn dialogue capabilities.</li>
+    <li> <a href="#PFLOW">P-Flow</a> stood 1st on <a target="_blank" href="https://sites.google.com/view/limmits24/results?authuser=0">ICASSP's Signal Processing Grand Challenge (LIMMITS 2024)</a> Track 3 focused on zero-shot TTS with langugage transfer.</li>
     <li> <a href="#PFLOW">Paper</a> about SOTA, fast and data-efficient flow-matching based zero-shot TTS through speech prompting.</li>
     <li> <a href="#RADMMM">RADMMM (VANI)</a> stood 1st in terms of speaker identity retention and 2nd in terms of overall MOS at <a target="_blank" href="https://sites.google.com/view/syspinttschallenge2023/leaderboard/main-leaderboard">ICASSP's Signal Processing Grand Challenge (LIMMITS 2023).</a></li>
     <li> <a href="#SELFVC">Paper</a> about voice conversion with iterative refinement using self transformations</li>
@@ -153,6 +154,35 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td><sectionheading>Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+
+  <tr>
+    <td width="33%" valign="top" align="center"><a target="_blank" href="https://audioflamingo.github.io"><br>
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://audioflamingo.github.io" id="AUDIOFLAMINGO">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Audio Flamingo: A Novel Audio Language Model with Few-Shot Learning and Dialogue Abilities</heading></a><br>
+      Zhifeng Kong, Arushi Goel, Rohan Badlani, Wei Ping, <strong>Rafael Valle</strong>, Bryan Catanzaro<br>
+      <em>under review</em> 2024
+      <br></p>
+
+      <div class="paper" id="audioflamingo">
+        <a href="javascript:toggleblock('audioflamingo_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('audioflamingo')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="audioflamingo_abs">In this paper, we propose Audio
+            FLamingo, a novel audio language model with 1) strong audio
+            understanding abilities, 2) the ability to quickly adapt to unseen
+            tasks via in-context learning and retrieval, and 3) strong
+            multi-turn dialogue abilities. We introduce a series of training
+            techniques, architecture design, and data strategies to enhance our
+            model with these abilities. Extensive evaluations across various
+            audio understanding tasks confirm the efficacy of our method,
+            setting new state-of-the-art benchmarks.</i></p>
+        <pre xml:space="preserve">
+        </pre>
+      </div>
+    </td>
+  </tr>
+
   <tr>
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://pflow-demo.github.io/projects/pflow/"><img src="https://pflow-demo.github.io/projects/pflow/images/pflow/pflow-architecture.png" alt="sym" width="75%" style="border-style: none"></a><br>
     reference<audio controls preload="none" style="width: 200px; height: 30px"><source src="https://drive.google.com/uc?export=open&amp;id=1YfMwSiXwOJzAgYE_3otR-i045Wm8H-jt" type="audio/mpeg" />audio not supported</audio><br>
@@ -222,7 +252,7 @@ segments and scores that describe novelty seeking behavior in listeners.
       <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>SelfVC: Voice Conversion With Iterative Refinement using Self Transformations</heading></a><br>
       Paarth Neekhara, Shehzeen Hussain, <strong>Rafael Valle</strong>, Boris Ginsburg, Rishabh Ranjan, Shlomo Dubnov, Farinaz Koushanfar, Julian McAuley<br>
-      <em>Under Review ICLR</em> 2024
+      <em>Under Review</em> 2024
       <br></p>
 
       <div class="paper" id="pflow">
@@ -768,6 +798,7 @@ segments and scores that describe novelty seeking behavior in listeners.
 hideallbibs();
 </script>
 
+<script xml:space="preserve" language="JavaScript">hideblock('audioflamingo_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('pflow_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('selfvc_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('radpp_abs');</script>
