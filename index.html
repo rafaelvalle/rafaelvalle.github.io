@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 
@@ -90,10 +89,11 @@
     <p>I am passionate about generative modeling, machine perception and machine
     improvisation. Over the years, I have had the opportunity to collaborate
     with fantastic researchers and co-invent 
-    <a href="#FUGATTO">Fugatto</a>,
-    <a href="#AUDIOFLAMINGO">the Audio Flamingo family of models</a>, 
+    <a href="#FUGATTO">Fugatto</a>, 
+    <a href="#AUDIOFLAMINGO">Audio Flamingo</a>, 
     <a href="#OMCAT">OMCAT</a>, 
     <a href="#ETTA">ETTA</a>, 
+    <a href="#KOELTTS">Koel-TTS</a>, 
     <a href="#PFLOW">P-Flow</a>, 
     the <a href="#RADMMM">RAD*</a> family of models with the <a href="#OTA">One Aligner To Rule Them All</a>, 
     <a href="#FLOWTRON">Flowtron</a> and 
@@ -143,14 +143,15 @@ segments and scores that describe novelty seeking behavior in listeners.
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
   <tr><td>
     <sectionheading>News</sectionheading>
-    <ul>     
-    <li> <a href="#AUDIO FLAMINGO">Paper</a> about SOTA, audio language model with few-shot learning and multi-turn dialogue capabilities.</li>
-    <li> <a href="#PFLOW">P-Flow</a> stood 1st on <a target="_blank" href="https://sites.google.com/view/limmits24/results?authuser=0">ICASSP's Signal Processing Grand Challenge (LIMMITS 2024)</a> Track 3 focused on zero-shot TTS with langugage transfer.</li>
-    <li> <a href="#PFLOW">Paper</a> about SOTA, fast and data-efficient flow-matching based zero-shot TTS through speech prompting.</li>
-    <li> <a href="#RADMMM">RADMMM (VANI)</a> stood 1st in terms of speaker identity retention and 2nd in terms of overall MOS at <a target="_blank" href="https://sites.google.com/view/syspinttschallenge2023/leaderboard/main-leaderboard">ICASSP's Signal Processing Grand Challenge (LIMMITS 2023).</a></li>
-    <li> <a href="#SELFVC">Paper</a> about voice conversion with iterative refinement using self transformations</li>
-    <li> <a href="#SPACE">Paper</a> about speech-driven Portrait Animation with Controllable Expression</li>
-    
+    <ul>
+    <li> <a href="#FUGATTO">Fugatto:</a> a Foundational Generative Audio Transformer model (ICLR 2025).</li>
+    <li> <a href="#AUDIO FLAMINGO 2 ">Audio Flamingo 2: </a> SOTA audio reasoning model topping MMAU.</li>    
+    <li> <a href="#OMCAT">OMCAT:</a> Omni Context Aware Transformer with efficient cross-modal temporal alignment</li>
+    <li> <a href="#UNIWAV">UniWav:</a> a unified framework for waveform generation (ICLR 2025).</li>
+    <li> <a href="#KOELTTS">Koel-TTS:</a> enhanced LLM-based speech generation with preference alignment and classifier free guidance.</li>
+    <li> <a href="#A2SB">A2SB:</a> unveiled audio-to-audio Schrödinger Bridges for improved synthesis.</li>
+    <li> <a href="#TANGOFLUX">TangoFlux:</a> super fast and faithful text-to-audio generation with flow matching (2024).</li>
+    <li> <a href="#ETTA">ETTA:</a> Ellucidating the design space of Text-To-Audio models.</li>
     </ul>
   </td></tr>
 </table>
@@ -159,22 +160,401 @@ segments and scores that describe novelty seeking behavior in listeners.
   <tr><td><sectionheading>Publications</sectionheading></td></tr>
 </table>
 <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
+<!-- Fugatto -->
   <tr>
-    <td width="33%" valign="top" align="center"><a target="_blank" href="https://audioflamingo.github.io"><img src="https://audioflamingo.github.io/static/audio_flamingo-modified.png"
-     alt="sym" width="75%" style="border-style: none"></a><br>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://fugatto.github.io/">
+        <iframe width="186" height="104" src="https://www.youtube.com/embed/qj1Sp8He6e4" title="Fugatto Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://fugatto.github.io/" id="Fugatto: Foundational Generative Audio Transformer Opus 1">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>Fugatto: Foundational Generative Audio Transformer Opus 1</heading>
+        </a><br>
+        <strong style="color: deeppink;">Rafael Valle</strong>, Rohan Badlani, Zhifeng Kong, Sang-gil Lee, Arushi Goel, Joao Felipe Santos, Aya Aljafari, Sungwon Kim, Shuqi Dai, Siddharth Gururani, Alexander H. Liu, Kevin J. Shih, Ryan Prenger, Wei Ping, Chao-Han Huck Yang, Bryan Catanzaro
+        <br>
+        <em>ICLR</em> 2025
+        <br>        
+      </p>
+      <div class="paper" id="fugatto">
+        <a target="_blank" href="https://openreview.net/pdf?id=B2Fqu7Y2cd">paper</a> |
+        <a target="_blank" href="https://fugatto.github.io/">website</a> |
+        <a href="javascript:toggleblock('fugatto_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('fugatto')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="fugatto_abs">
+          Fugatto is a versatile audio synthesis and transformation model capable of following free-form text instructions with optional audio inputs. While large language models (LLMs) trained with text on a simple next-token prediction objective can learn to infer instructions directly from the data, models trained solely on audio data lack this capacity. This is because audio data does not inherently contain the instructions that were used to generate it. To overcome this challenge, we introduce a specialized dataset generation approach optimized for producing a wide range of audio generation and transformation tasks, ensuring the data reveals meaningful relationships between audio and language. Another challenge lies in achieving compositional abilities -- such as combining, interpolating between, or negating instructions -- using data alone. To address it, we propose ComposableART, an inference-time technique that extends classifier-free guidance to compositional guidance. It enables the seamless and flexible composition of instructions, leading to highly customizable audio outputs outside the training distribution. Our evaluations across a diverse set of tasks demonstrate that Fugatto performs competitively with specialized models, while ComposableART enhances its sonic palette and control over synthesis. Most notably, we highlight our framework's ability to execute emergent sounds and tasks -- sonic phenomena that transcend conventional audio generation -- unlocking new creative possibilities.
+        </i></p>
+        <pre xml:space="preserve">
+        @misc{fugatto2025,
+          title={Fugatto},
+          author={Fugatto Team},
+          note={ICLR 2025, available at \url{https://fugatto.github.io/}}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- Omcat -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://om-cat.github.io">
+        <img src="https://om-cat.github.io/static/omcat-logo.jpg" alt="Omcat" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://arxiv.org/abs/2410.12109" id="OMCAT">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>OMCAT: Omni Context Aware Transformer</heading>
+        </a><br>
+        Arushi Goel, Karan Sapra, Matthieu Le, <strong style="color: deeppink;">Rafael Valle</strong>, Andrew Tao, Bryan Catanzaro<br>
+        <em>arXiv preprint 2024</em>
+        <br>
+      </p>
+      <div class="paper" id="omcat">
+        <a target="_blank" href="https://arxiv.org/abs/2410.12109">arXiv</a> |
+        <a href="javascript:toggleblock('omcat_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('omcat')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="omcat_abs">
+          Large Language Models (LLMs) have made significant strides in text generation and comprehension, with recent advancements extending into multimodal LLMs that integrate visual and audio inputs. However, these models continue to struggle with fine-grained, cross-modal temporal understanding, particularly when correlating events across audio and video streams. We address these challenges with two key contributions: a carefully curated benchmark and model, called OCTAV and OMCAT respectively. OCTAV (Omni Context and Temporal Audio Video) is a benchmark capturing event transitions across audio and video. Second, OMCAT (Omni Context Aware Transformer) is a powerful model that leverages RoTE (Rotary Time Embeddings), an innovative extension of RoPE, to enhance temporal grounding and computational efficiency in time-anchored tasks.Our model demonstrates state-of-the-art performance on Audio-Visual Question Answering (AVQA) tasks and the OCTAV benchmark, showcasing significant gains in temporal reasoning and cross-modal alignment, as validated through comprehensive experiments and ablation studies. Both the OCTAV benchmark and the code will be made publicly available.
+        </i></p>
+        <pre xml:space="preserve">
+  @article{goel2024omcat,
+    title={OMCAT: Omni context aware transformer},
+    author={Goel, A and Sapra, K and Le, M and Valle, R and Tao, A and Catanzaro, B},
+    journal={arXiv preprint arXiv:2410.12109},
+    year={2024}
+  }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- Koel-TTS -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://koeltts.github.io">
+        <img src="https://koeltts.github.io/audio/koel_podcast.png" alt="Koel-TTS" width="75%" style="border-style: none">
+      </a><br>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://koeltts.github.io" id="KOELTTS">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>Koel-TTS: Enhancing LLM based Speech Generation with Preference Alignment and Classifier Free Guidance</heading>
+        </a><br>
+        Shehzeen Hussain, Paarth Neekhara, Xuesong Yang, Edresson Casanova, Subhankar Ghosh, Mikyas T. Desta, Roy Fejgin, <strong style="color: deeppink;">Rafael Valle</strong>, Jason Li
+        <br>
+        <em>arXiv preprint 2025</em>
+        <br>
+      </p>
+      <div class="paper" id="koelt-ts">
+        <a target="_blank" href="https://arxiv.org/abs/2502.05236">arXiv</a> |
+        <a href="javascript:toggleblock('koelt-ts_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('koelt-ts')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="koelt-ts_abs">
+          While autoregressive speech token generation models produce speech with remarkable variety and naturalness, their inherent lack of controllability often results in issues such as hallucinations and undesired vocalizations that do not conform to conditioning inputs. We introduce Koel-TTS, a suite of enhanced encoder-decoder Transformer TTS models that address these challenges by incorporating preference alignment techniques guided by automatic speech recognition and speaker verification models. Additionally, we incorporate classifier-free guidance to further improve synthesis adherence to the transcript and reference speaker audio. Our experiments demonstrate that these optimizations significantly enhance target speaker similarity, intelligibility, and naturalness of synthesized speech. Notably, Koel-TTS directly maps text and context audio to acoustic tokens, and on the aforementioned metrics, outperforms state-of-the-art TTS models, despite being trained on a significantly smaller dataset. Audio samples and demos are available on our website.
+        </i></p>
+        <pre xml:space="preserve">
+        @article{hussain2025koelt,
+          title={Koel-TTS: Enhancing LLM based Speech Generation with Preference Alignment and Classifier Free Guidance},
+          author={Hussain, S and Neekhara, P and Yang, X and Casanova, E and Ghosh, S and Desta, MT and ...},
+          journal={arXiv preprint arXiv:2502.05236},
+          year={2025}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- UniWav -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://research.nvidia.com/labs/twn/publication/iclr_2025_uniwav/">
+        <img src="images/uniwav.png" alt="UniWav" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://research.nvidia.com/labs/twn/publication/iclr_2025_uniwav/" id="UNIWAV">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>UniWav</heading>
+        </a><br>
+        Alexander H. Liu, Sang-gil Lee, Chao-Han Huck Yang, Yuan Gong, Yu-Chiang Frank Wang, James R. Glass, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro
+        <br>
+        <em>ICLR</em> 2025
+        <br>
+      </p>
+      <div class="paper" id="uniwav">        
+        <a target="_blank" href="https://research.nvidia.com/labs/twn/publication/iclr_2025_uniwav">website</a> |
+        <a href="javascript:toggleblock('uniwav_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('uniwav')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="uniwav_abs">
+          Pre-training and representation learning have been playing an increasingly important role in modern speech processing. Nevertheless, different applications have been relying on different foundation models, since predominant pre-training techniques are either designed for discriminative tasks or generative tasks. In this work, we make the first attempt at building a unified pre-training framework for both types of tasks in speech. We show that with the appropriate design choices for pre-training, one can jointly learn a representation encoder and generative audio decoder that can be applied to both types of tasks. We propose UniWav, an encoder-decoder framework designed to unify pre-training representation learning and generative tasks. On speech recognition, text-to-speech, and speech tokenization, UniWav achieves comparable performance to different existing foundation models, each trained on a specific task. Our findings suggest that a single general-purpose foundation model for speech can be built to replace different foundation models, reducing the overhead and cost of pre-training.
+        </i></p>
+        <pre xml:space="preserve">
+        @misc{uniwav2025,
+          title={UniWav},
+          author={UniWav Team},
+          note={ICLR 2025, available at \url{https://research.nvidia.com/labs/twn/publication/iclr_2025_uniwav/}}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- A2SB -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://research.nvidia.com/labs/adlr/A2SB/">
+        <img src="https://research.nvidia.com/labs/adlr/images/a2sb/A2SB_overview.png" alt="A2SB" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://research.nvidia.com/labs/adlr/A2SB/" id="A2SB">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>A2SB: Audio-to-Audio Schrodinger Bridges</heading>
+        </a><br>
+        Zhifeng Kong*, Kevin J. Shih*, Weili Nie, Arash Vahdat, Sang-gil Lee, Joao Felipe Santos, Ante Jukic, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro<br>
+        <em>arXiv preprint 2025</em>
+        <br>
+      </p>
+      <div class="paper" id="a2sb">
+        <a target="_blank" href="https://arxiv.org/abs/2501.11311">arXiv</a> |
+        <a href="javascript:toggleblock('a2sb_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('a2sb')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="a2sb_abs">
+          Audio in the real world may be perturbed due to numerous factors, causing the audio quality to be degraded. The following work presents an audio restoration model tailored for high-res music at 44.1kHz. Our model, Audio-to-Audio Schrodinger Bridges (A2SB), is capable of both bandwidth extension (predicting high-frequency components) and inpainting (re-generating missing segments). Critically, A2SB is end-to-end without need of a vocoder to predict waveform outputs, able to restore hour-long audio inputs, and trained on permissively licensed music data. A2SB is capable of achieving state-of-the-art bandwidth extension and inpainting quality on several out-of-distribution music test sets.
+        </i></p>
+        <pre xml:space="preserve">
+        @article{kong2025a2sb,
+          title={A2SB: Audio-to-Audio Schrodinger Bridges},
+          author={Kong, Z and Shih, KJ and Nie, W and Vahdat, A and Lee, S and Santos, JF and Jukic, A and Valle, R and ...},
+          journal={arXiv preprint arXiv:2501.11311},
+          year={2025}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- TangoFlux -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://huggingface.co/spaces/declare-lab/TangoFlux">
+        <img src="https://github.com/declare-lab/TangoFlux/raw/main/assets/tf_teaser.png" alt="TangoFlux" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://huggingface.co/spaces/declare-lab/TangoFlux" id="TANGOFLUX">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>TangoFlux: Super Fast and Faithful Text to Audio Generation with Flow Matching and Clap-Ranked Preference Optimization</heading>
+        </a><br>
+        Chia-Yu Hung, Navonil Majumder, Zhifeng Kong, Ambuj Mehrish, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro, Soujanya Poria<br>
+        <em>arXiv preprint 2024</em>
+        <br>
+      </p>
+      <div class="paper" id="tangoflux">
+        <a target="_blank" href="https://arxiv.org/abs/2412.21037">arXiv</a> |
+        <a href="javascript:toggleblock('tangoflux_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('tangoflux')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="tangoflux_abs">
+          We introduce TangoFlux, an efficient Text-to-Audio (TTA) generative model with 515M parameters, capable of generating up to 30 seconds of 44.1kHz audio in just 3.7 seconds on a single A40 GPU. A key challenge in aligning TTA models lies in the difficulty of creating preference pairs, as TTA lacks structured mechanisms like verifiable rewards or gold-standard answers available for Large Language Models (LLMs). To address this, we propose CLAP-Ranked Preference Optimization (CRPO), a novel framework that iteratively generates and optimizes preference data to enhance TTA alignment. We demonstrate that the audio preference dataset generated using CRPO outperforms existing alternatives. With this framework, TangoFlux achieves state-of-the-art performance across both objective and subjective benchmarks. We open source all code and models to support further research in TTA generation.
+        </i></p>
+        <pre xml:space="preserve">
+  @article{hung2024tangoflux,
+    title={TangoFlux: Super Fast and Faithful Text to Audio Generation with Flow Matching and Clap-Ranked Preference Optimization},
+    author={Hung, CY and Majumder, N and Kong, Z and Mehrish, A and Valle, R and Catanzaro, B and Poria, S},
+    journal={arXiv preprint},
+    year={2024}
+  }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- ETTA -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://research.nvidia.com/labs/adlr/ETTA/">
+        <img src="https://research.nvidia.com/labs/adlr/images/etta/results_musiccaps.png" alt="ETTA" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://research.nvidia.com/labs/adlr/ETTA/" id="ETTA">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>ETTA: Elucidating the Design Space of Text-to-Audio Models</heading>
+        </a><br>
+        Sanggil Lee, Zhifeng Kong, Arushi Goel, Sungwon Kim, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro<br>
+        <em>arXiv preprint 2024</em>
+        <br>
+      </p>
+      <div class="paper" id="etta">
+        <a target="_blank" href="https://arxiv.org/abs/2412.19351">arXiv</a> |
+        <a href="javascript:toggleblock('etta_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('etta')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="etta_abs">
+          Recent years have seen significant progress in Text-To-Audio (TTA) synthesis, enabling users to enrich their creative workflows with synthetic audio generated from natural language prompts. Despite this progress, the effects of data, model architecture, training objective functions, and sampling strategies on target benchmarks are not well understood. With the purpose of providing a holistic understanding of the design space of TTA models, we set up a large-scale empirical experiment focused on diffusion and flow matching models. Our contributions include: 1) AF-Synthetic, a large dataset of high quality synthetic captions obtained from an audio understanding model; 2) a systematic comparison of different architectural, training, and inference design choices for TTA models; 3) an analysis of sampling methods and their Pareto curves with respect to generation quality and inference speed. We leverage the knowledge obtained from this extensive analysis to propose our best model dubbed Elucidated Text-To-Audio (ETTA). When evaluated on AudioCaps and MusicCaps, ETTA provides improvements over the baselines trained on publicly available data, while being competitive with models trained on proprietary data. Finally, we show ETTA's improved ability to generate creative audio following complex and imaginative captions -- a task that is more challenging than current benchmarks.
+        </i></p>
+        <pre xml:space="preserve">
+  @article{lee2024etta,
+    title={ETTA: Elucidating the Design Space of Text-to-Audio Models},
+    author={Lee, S and Kong, Z and Goel, A and Kim, S and Valle, R and Catanzaro, B},
+    journal={arXiv preprint arXiv:2412.19351},
+    year={2024}
+  }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- Expressivesinger -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="https://expressivesinger.github.io/ExpressiveSinger" href="#">
+        <img src="images/expressive_singer.png" alt="Expressivesinger" width="75%" style="border-style: none">
+      </a>
+      <audio controls preload="none" style="width: 200px; height: 30px"><source src="https://expressivesinger.github.io/ExpressiveSinger/demo/exp2/Female4_LetItBe-Pop-%E6%8A%92%E6%83%85_generated.wav" type="audio/mpeg" />audio not supported</audio>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="https://expressivesinger.github.io/ExpressiveSinger" href="#" id="EXPRESSIVESINGER">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>ExpressiveSinger: Multilingual and multi-style score-based singing voice synthesis with expressive performance control</heading>
+        </a><br>
+        Shuqi Dai, Ming-Yu Liu, <strong style="color: deeppink;">Rafael Valle</strong>, Siddharth Gururani<br>
+        <em>ACM Multimedia 2024</em>
+        <br>
+      </p>
+      <div class="paper" id="expressivesinger">
+        <a target="_blank" href="https://openreview.net/pdf?id=y9J0PNOOrY">pdf</a> |
+        <a href="javascript:toggleblock('expressivesinger_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('expressivesinger')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="expressivesinger_abs">
+          Singing Voice Synthesis (SVS) has significantly advanced with deep
+          generative models, achieving high audio quality but still struggling
+          with musicality, mainly due to the lack of performance control
+          over timing, dynamics, and pitch, which are essential for music
+          expression. Additionally, integrating data and supporting diverse
+          languages and styles in SVS remain challenging. To tackle these
+          issues, this paper presents ExpressiveSinger, an SVS framework that
+          leverages a cascade of diffusion models to generate realistic singing
+          across multiple languages, styles, and techniques from scores and
+          lyrics. Our approach begins with consolidating, cleaning, annotating, and processing public singing datasets, developing a multilingual phoneme set, and incorporating different musical styles and
+          techniques. We then design methods for generating expressive performance control signals including phoneme timing, F0 curves, and
+          amplitude envelopes, which enhance musicality and model consistency, introduce more controllability, and reduce data requirements.
+          Finally, we generate mel-spectrograms and audio from performance
+          control signals with style guidance and singer timbre embedding.
+          Our models also enable trained singers to sing in new languages
+          and styles. Several listening tests reveal both musicality and controllability of our generated singing compared with existing works
+          and human singing. We release the data for future research.
+        </i></p>
+        <pre xml:space="preserve">
+  @inproceedings{dai2024expressivesinger,
+    title={Expressivesinger: Multilingual and multi-style score-based singing voice synthesis with expressive performance control},
+    author={Dai, S and Liu, MY and Valle, R and Gururani, S},
+    booktitle={Proc. 32nd ACM Multimedia},
+    pages={3229--3238},
+    year={2024}
+  }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- Synthio -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://arxiv.org/abs/2410.02056">
+        <img src="images/dummy.png" alt="Synthio" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://arxiv.org/abs/2410.02056" id="SYNTHIO">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data</heading>
+        </a><br>
+        Sreyan Ghosh, S Kumar, Zhifeng Kong, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro, D Manocha<br>
+        <em>ICLR</em> 2025
+        <br>
+      </p>
+      <div class="paper" id="synthio">
+        <a target="_blank" href="https://arxiv.org/abs/2410.02056">arXiv</a> |
+        <a href="javascript:toggleblock('synthio_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('synthio')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="synthio_abs">
+          [Abstract placeholder for Synthio. Explanation of synthetic data augmentation for audio classification…]
+        </i></p>
+        <pre xml:space="preserve">
+  @article{ghosh2024synthio,
+    title={Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data},
+    author={Ghosh, S and Kumar, S and Kong, Z and Valle, R and Catanzaro, B and Manocha, D},
+    journal={arXiv preprint arXiv:2410.02056},
+    year={2024}
+  }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  <!-- Improving robustness of LLM-based speech synthesis by learning monotonic alignment -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://arxiv.org/abs/2406.17957">
+        <img src="images/dummy.png" alt="Robust Alignment" width="75%" style="border-style: none">
+      </a>
+    </td>
+    <td width="67%" valign="top">
+      <p>
+        <a target="_blank" href="https://arxiv.org/abs/2406.17957" id="ROBUSTALIGN">
+          <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+          <heading>Improving robustness of LLM-based speech synthesis by learning monotonic alignment</heading>
+        </a><br>
+        P Neekhara, S Hussain, Sreyan Ghosh, J Li, <strong style="color: deeppink;">Rafael Valle</strong>, R Badlani, B Ginsburg<br>
+        <em>arXiv preprint arXiv:2406.17957, 2024</em>
+        <br>
+      </p>
+      <div class="paper" id="robustalign">
+        <a target="_blank" href="https://arxiv.org/abs/2406.17957">arXiv</a> |
+        <a href="javascript:toggleblock('robustalign_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('robustalign')" class="togglebib">bibtex</a>
+        <p align="justify"> <i id="robustalign_abs">
+          [Abstract placeholder for Robust Alignment. Discussion on learning monotonic alignments for LLM-based TTS…]
+        </i></p>
+        <pre xml:space="preserve">
+  @article{neekhara2024robust,
+    title={Improving robustness of llm-based speech synthesis by learning monotonic alignment},
+    author={Neekhara, P and Hussain, S and Ghosh, S and Li, J and Valle, R and Badlani, R and Ginsburg, B},
+    journal={arXiv preprint arXiv:2406.17957},
+    year={2024}
+  }
+        </pre>
+      </div>
+    </td>
+  </tr>
+
+  
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <iframe width="186" height="104" src="https://www.youtube.com/embed/ucttuS28RVE?si=eJP09UaUZR-qKz8p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://audioflamingo.github.io" id="AUDIOFLAMINGO">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Audio Flamingo: A Novel Audio Language Model with Few-Shot Learning and Dialogue Abilities</heading></a><br>
-      Zhifeng Kong, Arushi Goel, Rohan Badlani, Wei Ping, <strong>Rafael Valle</strong>, Bryan Catanzaro<br>
+      Zhifeng Kong, Arushi Goel, Rohan Badlani, Wei Ping, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro<br>
       <em>under review</em> 2024
       <br></p>
 
       <div class="paper" id="audioflamingo">
 	<a target="_blank" href="https://arxiv.org/abs/2402.01831">arXiv</a> |
         <a href="javascript:toggleblock('audioflamingo_abs')">abstract</a> |
-        <a shape="rect" href="javascript:togglebib('audioflamingo')" class="togglebib">bibtex</a>
+        <a shape="rect" href="javascript:togglebib('audioflamingo')" class="togglebib">bibtex</a>        
         <p align="justify"> <i id="audioflamingo_abs">In this paper, we propose Audio
             Flamingo, a novel audio language model with 1) strong audio
             understanding abilities, 2) the ability to quickly adapt to unseen
@@ -202,9 +582,8 @@ segments and scores that describe novelty seeking behavior in listeners.
     P-Flow<audio controls preload="none" style="width: 200px; height: 30px">><source src="https://drive.google.com/uc?export=open&amp;id=1JjmFc8kBu99WgczZdXStxefn98gUNLN2" type="audio/mpeg" />audio not supported</audio>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://pflow-demo.github.io/projects/pflow/" id="PFLOW">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>P-Flow: A Fast and Data-Efficient Zero-Shot TTS through Speech Prompting</heading></a><br>
-      Sungwon Kim, Kevin Shih, Rohan Badlani, Joao Felipe Santos, Evelina Bakhturina, Mikyas Desta, <strong>Rafael Valle</strong>, Sungroh Yoon, Bryan Catanzaro<br>
+      Sungwon Kim, Kevin Shih, Rohan Badlani, Joao Felipe Santos, Evelina Bakhturina, Mikyas Desta, <strong style="color: deeppink;">Rafael Valle</strong>, Sungroh Yoon, Bryan Catanzaro<br>
       <em>NEURIPS</em> 2023
       <br></p>
 
@@ -229,9 +608,8 @@ segments and scores that describe novelty seeking behavior in listeners.
     
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/projects/radmmm/" id="RADMMM">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>RADMMM: Multilingual Multiaccented Multispeaker Text-to-Speech</heading></a><br>
-      Rohan Badlani, <strong>Rafael Valle</strong>, Kevin J. Shih, João Felipe Santos, Siddhart Gururani, Bryan Catanzaro<br>
+      Rohan Badlani, <strong style="color: deeppink;">Rafael Valle</strong>, Kevin J. Shih, João Felipe Santos, Siddhart Gururani, Bryan Catanzaro<br>
       <em>Interspeech</em> 2023
       <br></p>
 
@@ -262,9 +640,8 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://selfspeechsynthesis.github.io/"><img src="images/selfvc.png" alt="sym" width="75%" style="border-style: none"></a><br>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://selfspeechsynthesis.github.io/" id="SELFVC">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>SelfVC: Voice Conversion With Iterative Refinement using Self Transformations</heading></a><br>
-      Paarth Neekhara, Shehzeen Hussain, <strong>Rafael Valle</strong>, Boris Ginsburg, Rishabh Ranjan, Shlomo Dubnov, Farinaz Koushanfar, Julian McAuley<br>
+      Paarth Neekhara, Shehzeen Hussain, <strong style="color: deeppink;">Rafael Valle</strong>, Boris Ginsburg, Rishabh Ranjan, Shlomo Dubnov, Farinaz Koushanfar, Julian McAuley<br>
       <em>Under Review</em> 2024
       <br></p>
 
@@ -285,9 +662,8 @@ segments and scores that describe novelty seeking behavior in listeners.
     <iframe width="186" height="104" src="https://www.youtube.com/embed/DdCvJ8JI2-M?si=zugEVrxq6tsX_LwJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/dir/space/" id="SPACE">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>SPACE: Speech-driven Portrait Animation with Controllable Expression</heading></a><br>
-      Siddharth Gururani, Arun Mallya, Ting-Chun Wang, <strong>Rafael Valle</strong>, Ming-Yu Liu<br>
+      Siddharth Gururani, Arun Mallya, Ting-Chun Wang, <strong style="color: deeppink;">Rafael Valle</strong>, Ming-Yu Liu<br>
       <em>ICCV</em> 2023
       <br></p>
 
@@ -316,9 +692,8 @@ segments and scores that describe novelty seeking behavior in listeners.
     <audio controls preload="none" style="height:30px;width:200px"><source src="http://docs.google.com/uc?export=open&id=1f85rgFrKDrSkq_V52cpgXSROtje6IWI1" type="audio/mpeg">audio not supported</audio></center>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/" id="RADPP">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>High-Acoustic Fidelity Text To Speech Synthesis With Fine-Grained Control Of Speech Attributes</heading></a><br>
-      <strong>Rafael Valle</strong>, João Felipe Santos, Kevin J. Shih, Rohan Badlani, Bryan Catanzaro<br>
+      <strong style="color: deeppink;">Rafael Valle</strong>, João Felipe Santos, Kevin J. Shih, Rohan Badlani, Bryan Catanzaro<br>
       <em>ICASSP</em> 2023
       <br></p>
 
@@ -347,9 +722,8 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="33%" valign="top" align="center"><a target="_blank" href="https://ieeexplore.ieee.org/document/10096220"><img src="images/anytoanyvc.png" alt="sym" width="75%" style="border-style: none"></a>
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://ieeexplore.ieee.org/document/10096220" id="ANYTOANY">
-      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
       <heading>Any-to-Any Voice Conversion with F0 and Timbre Disentanglement and Novel Timbre Conditioning</heading></a><br>
-      Sudheer Kovela, <strong>Rafael Valle</strong>, Ambrish Dantrey, Bryan Catanzaro<br>
+      Sudheer Kovela, <strong style="color: deeppink;">Rafael Valle</strong>, Ambrish Dantrey, Bryan Catanzaro<br>
       <em>ICASSP</em> 2023
       <br></p>
 
@@ -378,7 +752,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/projects/radmmm/" id="VANI">
       <heading>VANI: Very-lightweight Accent-controllable TTS for Native and Non-native speakers with Identity Preservation</heading></a><br>
-      Rohan Badlani, Ashish Arora, Subhankar Ghosh, <strong>Rafael Valle</strong>, Kevin J. Shih, João Felipe Santos, Boris Ginsburg, Bryan Catanzaro<br>
+      Rohan Badlani, Ashish Arora, Subhankar Ghosh, <strong style="color: deeppink;">Rafael Valle</strong>, Kevin J. Shih, João Felipe Santos, Boris Ginsburg, Bryan Catanzaro<br>
       <em>ICASSP</em> 2023
       <br></p>
 
@@ -409,7 +783,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/one-tts-alignment/" id="OTA">
       <heading>One TTS Alignment to Rule Them All</heading></a><br>
-      Rohan Badlani, Adrian Łańcucki, Kevin J. Shih, <strong>Rafael Valle</strong><br>
+      Rohan Badlani, Adrian Łańcucki, Kevin J. Shih, <strong style="color: deeppink;">Rafael Valle</strong><br>
       <em>ICASSP</em> 2022
       <br></p>
 
@@ -440,7 +814,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/" id="GML">
       <heading>Generative modeling for low dimensional speech attributes with neural spline flows</heading></a><br>
-      Kevin J. Shih, <strong>Rafael Valle</strong>, Rohan Badlani, Bryan Catanzaro<br>
+      Kevin J. Shih, <strong style="color: deeppink;">Rafael Valle</strong>, Rohan Badlani, Bryan Catanzaro<br>
       <em>arXiv</em> 2022
       <br></p>
 
@@ -469,7 +843,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://research.nvidia.com/labs/adlr/RADTTS/" id="RADTTS">
       <heading>RAD-TTS: Parallel flow-based TTS with robust alignment learning and diverse synthesis</heading></a><br>
-      Kevin J. Shih, <strong>Rafael Valle</strong>, Rohan Badlani, Adrian Lancucki, Wei Ping, Bryan Catanzaro<br>
+      Kevin J. Shih, <strong style="color: deeppink;">Rafael Valle</strong>, Rohan Badlani, Adrian Lancucki, Wei Ping, Bryan Catanzaro<br>
       <em>ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models</em> 2021
       <br></p>
 
@@ -496,7 +870,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/pdf/1712.04046.pdf" id="CBH">
       <heading>Character-based handwritten text transcription with attention networks</heading></a><br>
-      Jason Poulos and <strong>Rafael Valle</strong><br>
+      Jason Poulos and <strong style="color: deeppink;">Rafael Valle</strong><br>
       <em>Neural Computing and Applications</em> 2021
       <br></p>
 
@@ -529,7 +903,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p>
       <heading>Improving Keyword Spotting with Synthetic Speech</heading></a><br>
-      U.  Vaidya, <strong>Rafael Valle</strong>, M. Jain, U. Ahmed, V. Karandikar, S. S. Chauhan, Bryan Catanzaro<br>
+      U.  Vaidya, <strong style="color: deeppink;">Rafael Valle</strong>, M. Jain, U. Ahmed, V. Karandikar, S. S. Chauhan, Bryan Catanzaro<br>
       <br></p>
 
       <div class="paper" id="keyword">
@@ -547,7 +921,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/2005.05957" id="FLOWTRON">
          <heading>Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis</heading></a><br>
-         <strong>Rafael Valle</strong>, Kevin Shih, Ryan Prenger, Bryan Catanzaro<br>
+         <strong style="color: deeppink;">Rafael Valle</strong>, Kevin Shih, Ryan Prenger, Bryan Catanzaro<br>
          <em>arXiv</em> 2019 - <em>ICLR</em> 2020<br>
          <br></p>
 
@@ -571,7 +945,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1912.11683" id="NEURALODE">
       <heading>Neural ODEs for Image Segmentation with Level Sets</heading></a><br>
-      <strong>Rafael Valle</strong>, Fitsum Reda, Mohammad Shoeybi, Patrick Legresley, Andrew Tao, Bryan Catanzaro<br>
+      <strong style="color: deeppink;">Rafael Valle</strong>, Fitsum Reda, Mohammad Shoeybi, Patrick Legresley, Andrew Tao, Bryan Catanzaro<br>
       <em>arXiv</em> 2019<br>
       <br></p>
 
@@ -592,7 +966,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1910.11997" id="MELLOTRON">
       <heading>Mellotron: Multispeaker expressive voice synthesis by conditioning on rhythm, pitch and global style tokens</heading></a><br>
-      <strong>Rafael Valle*</strong>, Jason Li*, Ryan Prenger, Bryan Catanzaro<br>
+      <strong style="color: deeppink;">Rafael Valle*</strong>, Jason Li*, Ryan Prenger, Bryan Catanzaro<br>
       <em>arXiv</em> 2019 - <em>ICASSP</em> 2020<br>
       <br></p>
 
@@ -621,7 +995,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://arxiv.org/abs/1811.00002" id="WAVEGLOW">
       <heading>WaveGlow: a Flow-based Generative Network for Speech Synthesis</heading></a><br>
-      Ryan Prenger, <strong>Rafael Valle</strong>, Bryan Catanzaro<br>
+      Ryan Prenger, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro<br>
       <em>ICASSP</em> 2019<br>
       <br></p>
 
@@ -647,7 +1021,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://github.com/rafaelvalle/ipgans/blob/master/latex/ipgans.pdf" id="IPGAN">
       <heading>TequilaGAN: How to easily identify GAN samples</heading></a><br>
-      <strong>Rafael Valle</strong>, Wilson Cai and Anish Doshi<br>
+      <strong style="color: deeppink;">Rafael Valle</strong>, Wilson Cai and Anish Doshi<br>
       <em>arXiv</em> 2018<br>
       <br></p>
 
@@ -674,7 +1048,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://github.com/rafaelvalle/asrgen/blob/master/main.pdf" id="ASRGEN">
       <heading>Attacking Speaker Recognition with Deep Generative Models</heading></a><br>
-      Anish Doshi, Wilson Cai and <strong>Rafael Valle</strong><br>
+      Anish Doshi, Wilson Cai and <strong style="color: deeppink;">Rafael Valle</strong><br>
       <em>arXiv</em> 2017<br>
 
       <div class="paper" id="asrgen">
@@ -703,7 +1077,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="http://github.com/rafaelvalle/neural_network_control_improvisation" id="SEQGAN">
       <heading>Sequence Generation with GANs</heading></a><br>
-      <strong>Rafael Valle</strong><br>
+      <strong style="color: deeppink;">Rafael Valle</strong><br>
       2017
       <br></p>
 
@@ -721,7 +1095,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://github.com/rafaelvalle/machine_listening" id="ABROA">
       <heading>Audio-Based Room Occupancy Analysis using Gaussian Mixtures and Hidden Markov Models</heading></a><br>
-      <strong>Rafael Valle</strong><br>
+      <strong style="color: deeppink;">Rafael Valle</strong><br>
       <em>Future Technologies Conference (FTC)</em> 2016<br>
       <em>Detection and Classification of Acoustic Scenes and Events </em> 2016
       <br></p>
@@ -752,7 +1126,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <td width="67%" valign="top">
       <p><a target="_blank" href="https://github.com/rafaelvalle/mdi" id="MDI">
       <heading>Missing Data Imputation for Supervised Classification</heading></a><br>
-      Jason Poulos and <strong>Rafael Valle</strong><br>
+      Jason Poulos and <strong style="color: deeppink;">Rafael Valle</strong><br>
       <em>Applied Artificial Intelligence</em> 2018
       <br></p>
 
@@ -781,7 +1155,7 @@ segments and scores that describe novelty seeking behavior in listeners.
       <p><a target="_blank"
           href="https://github.com/rafaelvalle/music_pattern_graphs" id="PATTGRAPH">
       <heading>Learning and Visualizing Music Specifications using Pattern Graphs</heading></a><br>
-      <strong>Rafael Valle</strong>, Daniel Fremont, Ilge Akkaya, Alexandre Donze, Adrian Freed and Sanjit Seshia<br>
+      <strong style="color: deeppink;">Rafael Valle</strong>, Daniel Fremont, Ilge Akkaya, Alexandre Donze, Adrian Freed and Sanjit Seshia<br>
       <em>ISMIR</em> 2016
       <br></p>
 
@@ -811,6 +1185,16 @@ segments and scores that describe novelty seeking behavior in listeners.
 hideallbibs();
 </script>
 
+<script xml:space="preserve" language="JavaScript">hideblock('fugatto_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('uniwav_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('koelt-ts_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('a2sb_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('tangoflux_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('etta_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('expressivesinger_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('omcat_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('synthio_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('robustalign_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('audioflamingo_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('pflow_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('selfvc_abs');</script>
