@@ -145,7 +145,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     <sectionheading>News</sectionheading>
     <ul>
     <li> <a href="#FUGATTO">Fugatto:</a> Foundational Generative Audio Transformer Opus 1 – <a target="_blank" href="https://x.com/keunwoochoi/status/1861160370699632836">"The first ChatGPT moment (or Llama3 moment) in audio/music/speech."</a> (ICLR 2025).</li>
-    <li> <a href="#AUDIO FLAMINGO 2 ">Audio Flamingo 2 (soon on arXiv): </a> SOTA audio reasoning model topping <a target="_blank" href="https://arxiv.org/abs/2410.19168">MMAU</a>.</li>    
+    <li> <a href="#AUDIOFLAMINGO2 ">Audio Flamingo 2 (soon on arXiv): </a> SOTA audio reasoning model topping <a target="_blank" href="https://arxiv.org/abs/2410.19168">MMAU</a>.</li>    
     <li> <a href="#OMCAT">OMCAT:</a> Omni Context Aware Transformer with efficient cross-modal temporal alignment.</li>
     <li> <a href="#UNIWAV">UniWav:</a> a unified framework for waveform generation (ICLR 2025).</li>
     <li> <a href="#KOELTTS">Koel-TTS:</a> enhanced LLM-based speech generation with preference alignment and classifier free guidance.</li>
@@ -197,7 +197,7 @@ segments and scores that describe novelty seeking behavior in listeners.
     </td>
   </tr>
 
-  <!-- Omcat -->
+  <!-- OMCAT -->
   <tr>
     <td width="33%" valign="top" align="center">
       <a target="_blank" href="https://om-cat.github.io">
@@ -233,6 +233,38 @@ segments and scores that describe novelty seeking behavior in listeners.
     </td>
   </tr>
 
+  <!-- Audio Flamingo -->
+  <tr>
+    <td width="33%" valign="top" align="center">
+      <a target="_blank" href="https://sites.google.com/view/audioflamingo2">
+        <img src="https://airanonymous.github.io/af2_anon/af2/radar_af2_new_norm_sk-1.png" alt="Audio Flamingo 2" width="75%" style="border-style: none">
+      </a>      
+    <td width="67%" valign="top">
+      <p><a target="_blank" href="https://sites.google.com/view/audioflamingo2" id="AUDIOFLAMINGO2">
+      <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
+      <heading>Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities</heading></a><br>
+      Sreyan Ghosh, Zhifeng Kong, Sonal Kumar, S Sakshi, Jaehyeon Kim, Wei Ping, <strong style="color: deeppink;">Rafael Valle</strong>, Dinesh Manocha, Bryan Catanzaro<br>
+      <em>under review</em> 2025
+      <br></p>
+
+      <div class="paper" id="audioflamingo2">
+        <a href="javascript:toggleblock('audioflamingo2_abs')">abstract</a> |
+        <a shape="rect" href="javascript:togglebib('audioflamingo2')" class="togglebib">bibtex</a>        
+        <p align="justify"> <i id="audioflamingo2_abs">Understanding and reasoning over non-speech sounds and music are crucial for both humans and AI agents to interact effectively with their environments. In this paper, we introduce Audio Flamingo 2 (AF2), an Audio-Language Model (ALM) with advanced audio understanding and reasoning capabilities. AF2 leverages (i) a custom CLAP model, (ii) synthetic AQA data for fine-grained audio reasoning, and (iii) a multi-stage curriculum learning strategy. AF2 achieves state-of-the-art performance with only a 3B parameter small language model, surpassing large open-source and proprietary models across 20+ benchmarks. Next, for the first time, we extend audio understanding to long audio segments (30 secs - 5 mins) and propose LongAudio, a large and novel dataset for training ALMs on long audio captioning and question-answering tasks. Fine-tuning AF2 on LongAudio leads to exceptional performance on our proposed LongAudioBench, an expert annotated benchmark for evaluating ALMs on long audio understanding capabilities. We conduct extensive ablation studies to confirm the efficacy of our approach. All code and data will be open-sourced.
+
+</i></p>
+        <pre xml:space="preserve">
+  @article{kong2024audio,
+          title={Audio Flamingo: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities},
+          author={Sreyan Ghosh, Zhifeng Kong, Sonal Kumar, S Sakshi, Jaehyeon Kim, Wei Ping, Rafael Valle, Dinesh Manocha, Bryan Catanzaro},
+          journal={},
+          year={2025}
+        }
+        </pre>
+      </div>
+    </td>
+  </tr>
+  
   <!-- Koel-TTS -->
   <tr>
     <td width="33%" valign="top" align="center">
@@ -487,7 +519,7 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
           <img src="images/new.png" alt="[NEW]" width="6%" style="border-style: none">
           <heading>Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data</heading>
         </a><br>
-	Sreyan Ghosh, Sonal Kumar, Zhifeng Kong, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro, Dinesh Manocha<br>        
+  Sreyan Ghosh, Sonal Kumar, Zhifeng Kong, <strong style="color: deeppink;">Rafael Valle</strong>, Bryan Catanzaro, Dinesh Manocha<br>        
         <em>ICLR</em> 2025
         <br>
       </p>
@@ -546,7 +578,7 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
     </td>
   </tr>
 
-  
+  <!-- Audio Flamingo -->
   <tr>
     <td width="33%" valign="top" align="center">
       <iframe width="186" height="104" src="https://www.youtube.com/embed/ucttuS28RVE?si=eJP09UaUZR-qKz8p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br>
@@ -558,7 +590,7 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
       <br></p>
 
       <div class="paper" id="audioflamingo">
-	<a target="_blank" href="https://arxiv.org/abs/2402.01831">arXiv</a> |
+  <a target="_blank" href="https://arxiv.org/abs/2402.01831">arXiv</a> |
         <a href="javascript:toggleblock('audioflamingo_abs')">abstract</a> |
         <a shape="rect" href="javascript:togglebib('audioflamingo')" class="togglebib">bibtex</a>        
         <p align="justify"> <i id="audioflamingo_abs">In this paper, we propose Audio
@@ -571,7 +603,7 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
             audio understanding tasks confirm the efficacy of our method,
             setting new state-of-the-art benchmarks.</i></p>
         <pre xml:space="preserve">
-	@article{kong2024audio,
+  @article{kong2024audio,
           title={Audio Flamingo: A Novel Audio Language Model with Few-Shot Learning and Dialogue Abilities},
           author={Kong, Zhifeng and Goel, Arushi and Badlani, Rohan and Ping, Wei and Valle, Rafael and Catanzaro,    Bryan},
           journal={arXiv preprint arXiv:2402.01831},
@@ -914,7 +946,7 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
 
       <div class="paper" id="keyword">
         <a href="javascript:toggleblock('keyword_abs')">abstract</a>    
-	<p align="justify"> <i id="keyword_abs">In this paper we describe a method that uses text-to-speech (TTS) synthesis models to improve the quality of keyword spotting models and to reduce the time and money required to train them. We synthesize varied data from different speakers by combining Flowtron, a multispeaker text-to-mel-spectrogram synthesis model producing speech with high variance, and WaveGlow, a universal mel-spectrogram to audio model. We fine-tune the synthetic data by using QuartzNet, an automatic speech recognition model, to find and remove samples with skipped, repeated and mispronounced words. With this fine-tuned synthetic data and 10% of human data we are able to achieve keyword spotting scores (accuracy and F1) that are comparable to using the full human dataset. We provide results on binary and multiclass Wake-up-Word datasets, including the Speech Commands Dataset.</i></p>
+  <p align="justify"> <i id="keyword_abs">In this paper we describe a method that uses text-to-speech (TTS) synthesis models to improve the quality of keyword spotting models and to reduce the time and money required to train them. We synthesize varied data from different speakers by combining Flowtron, a multispeaker text-to-mel-spectrogram synthesis model producing speech with high variance, and WaveGlow, a universal mel-spectrogram to audio model. We fine-tune the synthetic data by using QuartzNet, an automatic speech recognition model, to find and remove samples with skipped, repeated and mispronounced words. With this fine-tuned synthetic data and 10% of human data we are able to achieve keyword spotting scores (accuracy and F1) that are comparable to using the full human dataset. We provide results on binary and multiclass Wake-up-Word datasets, including the Speech Commands Dataset.</i></p>
       </div>
     </td>
   </tr>
@@ -935,12 +967,12 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
         <a target="_blank" href="https://arxiv.org/abs/2005.05957">pdf</a> | 
         <a target="_blank" href="https://nv-adlr.github.io/Flowtron">samples</a> |
         <a href="javascript:toggleblock('flowtron_abs')">abstract</a>    
-      	<p align="justify"> <i id="flowtron_abs">In our recent paper, we
-      	  propose Flowtron: an autoregressive flow-based generative network for
-      	  text-to-speech synthesis with control over speech variation and style
-      	  transfer. Flowtron combines insights from IAF and optimizes Tacotron 2
-      	  in order to provide high-quality and controllable mel-spectrogram synthesis.        
-      	</i></p>
+        <p align="justify"> <i id="flowtron_abs">In our recent paper, we
+          propose Flowtron: an autoregressive flow-based generative network for
+          text-to-speech synthesis with control over speech variation and style
+          transfer. Flowtron combines insights from IAF and optimizes Tacotron 2
+          in order to provide high-quality and controllable mel-spectrogram synthesis.        
+        </i></p>
       </div>
     </td>
   </tr>
@@ -958,8 +990,8 @@ bandwidth expanded<audio controls preload="none" style="width: 200px; height: 30
       <div class="paper" id="flowtron">
         <a target="_blank" href="https://arxiv.org/pdf/1912.11683.pdf">pdf</a> | 
         <a href="javascript:toggleblock('node_abs')">abstract</a>    
-	<p align="justify"> <i id="node_abs">We propose a novel approach for image segmentation that combines Neural Ordinary Differential Equations (NODEs) and the Level Set method.  Our approach parametrizes the evolution of an initial contour with a NODE that implicitly learns from data a speed function describing the evolution.  In addition, for cases where an initial contour is not available and to alleviate the need for careful choice or design of contour embedding functions, we propose a NODE-based method that evolves an image embedding into a dense per-pixel semantic label space. We evaluate our methods on kidney segmentation (KiTS19) and on salient object detection (PASCAL-S, ECSSD and HKU-IS). In addition to improving initial contours provided by deep learning models while using a fraction of their number of parameters, our approach achieves F scores that are higher than several state-of-the-art deep learning algorithms
-	</i></p>
+  <p align="justify"> <i id="node_abs">We propose a novel approach for image segmentation that combines Neural Ordinary Differential Equations (NODEs) and the Level Set method.  Our approach parametrizes the evolution of an initial contour with a NODE that implicitly learns from data a speed function describing the evolution.  In addition, for cases where an initial contour is not available and to alleviate the need for careful choice or design of contour embedding functions, we propose a NODE-based method that evolves an image embedding into a dense per-pixel semantic label space. We evaluate our methods on kidney segmentation (KiTS19) and on salient object detection (PASCAL-S, ECSSD and HKU-IS). In addition to improving initial contours provided by deep learning models while using a fraction of their number of parameters, our approach achieves F scores that are higher than several state-of-the-art deep learning algorithms
+  </i></p>
       </div>
     </td>
   </tr>
@@ -1192,13 +1224,14 @@ hideallbibs();
 </script>
 
 <script xml:space="preserve" language="JavaScript">hideblock('fugatto_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('omcat_abs');</script>
+<script xml:space="preserve" language="JavaScript">hideblock('audioflamingo2_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('uniwav_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('koelt-ts_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('a2sb_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('tangoflux_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('etta_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('expressivesinger_abs');</script>
-<script xml:space="preserve" language="JavaScript">hideblock('omcat_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('synthio_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('robustalign_abs');</script>
 <script xml:space="preserve" language="JavaScript">hideblock('audioflamingo_abs');</script>
