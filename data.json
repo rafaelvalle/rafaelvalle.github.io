@@ -1,0 +1,625 @@
+{
+  "publications": {
+    "OMNIVINCI": {
+      "title": "OmniVinci: Enhancing Architecture and Data for Omni-Modal Understanding LLM",
+      "authors": ["Hanrong Ye", "Chao-Han Huck Yang", "Arushi Goel", "Wei Huang", "Ligeng Zhu", "Yuanhang Su", "Sean Lin", "An-Chieh Cheng", "Zhen Wan", "Jinchuan Tian", "Yuming Lou", "Dong Yang", "Zhijian Liu", "Yukang Chen", "Ambrish Dantrey", "Ehsan Jahangiri", "Sreyan Ghosh", "Daguang Xu", "Ehsan Hosseini-Asl", "Danial Mohseni Taheri", "Vidya Murali", "Sifei Liu", "Yao Lu", "Oluwatobi Olabiyi", "Yu-Chiang Frank Wang", "Rafael Valle", "Bryan Catanzaro", "Andrew Tao", "Song Han", "Jan Kautz", "Hongxu Yin", "Pavlo Molchanov"],
+      "venue": "ICLR",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2510.15870",
+        "website": "https://nvlabs.github.io/OmniVinci/"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://nvlabs.github.io/OmniVinci/image/metrics_highlight.png"
+      },
+      "abstract": "Advancing machine intelligence requires developing the ability to perceive across multiple modalities, much as humans sense the world. We introduce OmniVinci, an initiative to build a strong, open-source, omni-modal LLM. We carefully study the design choices across model architecture and data curation. For model architecture, we present three key innovations: (i) OmniAlignNet for strengthening alignment between vision and audio embeddings in a shared omni-modal latent space; (ii) Temporal Embedding Grouping for capturing relative temporal alignment between vision and audio signals; and (iii) Constrained Rotary Time Embedding for encoding absolute temporal information in omni-modal embeddings. We introduce a curation and synthesis pipeline that generates 24M single-modal and omni-modal conversations. We find that modalities reinforce one another in both perception and reasoning. Our model, OmniVinci, outperforms Qwen2.5-Omni with +19.05 on DailyOmni (cross-modal understanding), +1.7 on MMAR (audio), and +3.9 on Video-MME (vision), while using just 0.2T training tokens - a 6 times reduction compared to Qwen2.5-Omni's 1.2T. We finally demonstrate omni-modal advantages in downstream applications spanning robotics, medical AI, and smart factory.",
+      "bibtex": ""
+    },
+    "UALM": {
+      "title": "UALM: Unified Audio Language Model for Understanding, Generation and Reasoning",
+      "authors": ["Jinchuan Tian", "Sang-gil Lee", "Zhifeng Kong", "Sreyan Ghosh", "Arushi Goel", "Chao-Han Huck Yang", "Wenliang Dai", "Zihan Liu", "Hanrong Ye", "Shinji Watanabe", "Mohammad Shoeybi", "Bryan Catanzaro", "Rafael Valle", "Wei Ping"],
+      "venue": "ICLR",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2510.12000",
+        "website": "https://research.nvidia.com/labs/adlr/UALM/"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://research.nvidia.com/labs/adlr/images/ualm/arch2.png"
+      },
+      "abstract": "Recent advances in the audio language modeling (ALM) domain tackle audio understanding and text-to-audio generation as separate tasks. Very few studies attempt to unify these tasks -- an essential step toward advanced multimodal reasoning. This paper introduces Unified Audio Language Model (UALM), which aims to unify audio understanding, text-to-audio generation, and multimodal reasoning in a single model. To achieve this goal, we first present UALM-Gen, a text-to-audio language model that directly predicts audio tokens and is comparable to state-of-the-art diffusion-based models. We then demonstrate, using proper data blending, training recipes, and inference techniques, that our single UALM model matches the quality of state-of-the-art specialized models in audio understanding, text-to-audio generation, and text reasoning. Furthermore, we present UALM-Reason, a multimodal reasoning model that utilizes both text and audio in the intermediate thinking steps to facilitate complex generation tasks. To our knowledge, this is the first demonstration in audio research of cross-modal generative reasoning, with its effectiveness confirmed by subjective evaluations.",
+      "bibtex": ""
+    },
+    "AUDIO": {
+      "title": "Audio Flamingo 3: Advancing audio intelligence with fully open large audio language models",
+      "authors": ["Arushi Goel", "Sreyan Ghosh", "Jaehyeon Kim", "Sonal Kumar", "Zhifeng Kong", "Sang-gil Lee", "Chao-Han Huck Yang", "Ramani Duraiswami", "Dinesh Manocha", "Rafael Valle", "Bryan Catanzaro"],
+      "venue": "NeurIPS",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2507.08128",
+        "website": "https://research.nvidia.com/labs/adlr/AF3/"
+      },
+      "media": {
+        "type": "youtube",
+        "src": "https://www.youtube.com/embed/u5bZYxz963s"
+      },
+      "abstract": "We present Audio Flamingo 3 (AF3), a fully open state-of-the-art (SOTA) large audio-language model that advances reasoning and understanding across speech, sound, and music. AF3 introduces: (i) AF-Whisper, a unified audio encoder trained using a novel strategy for joint representation learning across all 3 modalities of speech, sound, and music; (ii) flexible, on-demand thinking, allowing the model to do chain-of-thought-type reasoning before answering; (iii) multi-turn, multi-audio chat; (iv) long audio understanding and reasoning (including speech) up to 10 minutes; and (v) voice-to-voice interaction. To enable these capabilities, we propose several large-scale training datasets curated using novel strategies, including AudioSkills-XL, LongAudio-XL, AF-Think, and AF-Chat, and train AF3 with a novel five-stage curriculum-based training strategy. Trained on only open-source audio data, AF3 achieves new SOTA results on over 20+ (long) audio understanding and reasoning benchmarks, surpassing both open-weight and closed-source models trained on much larger datasets.",
+      "bibtex": ""
+    },
+    "FUGATTO": {
+      "title": "Fugatto: Foundational Generative Audio Transformer Opus 1",
+      "authors": ["Rafael Valle", "Rohan Badlani", "Zhifeng Kong", "Sang-gil Lee", "Arushi Goel", "Joao Felipe Santos", "Aya Aljafari", "Sungwon Kim", "Shuqi Dai", "Siddharth Gururani", "Alexander H. Liu", "Kevin J. Shih", "Ryan Prenger", "Wei Ping", "Chao-Han Huck Yang", "Bryan Catanzaro"],
+      "venue": "ICLR",
+      "year": 2025,
+      "links": {
+        "paper": "https://openreview.net/pdf?id=B2Fqu7Y2cd",
+        "website": "https://fugatto.github.io/"
+      },
+      "media": {
+        "type": "youtube",
+        "src": "https://www.youtube.com/embed/7ImCL59GdLQ"
+      },
+      "abstract": "Fugatto is a versatile audio synthesis and transformation model capable of following free-form text instructions with optional audio inputs. While large language models (LLMs) trained with text on a simple next-token prediction objective can learn to infer instructions directly from the data, models trained solely on audio data lack this capacity. This is because audio data does not inherently contain the instructions that were used to generate it. To overcome this challenge, we introduce a specialized dataset generation approach optimized for producing a wide range of audio generation and transformation tasks, ensuring the data reveals meaningful relationships between audio and language. Another challenge lies in achieving compositional abilities -- such as combining, interpolating between, or negating instructions -- using data alone. To address it, we propose ComposableART, an inference-time technique that extends classifier-free guidance to compositional guidance. It enables the seamless and flexible composition of instructions, leading to highly customizable audio outputs outside the training distribution. Our evaluations across a diverse set of tasks demonstrate that Fugatto performs competitively with specialized models, while ComposableART enhances its sonic palette and control over synthesis. Most notably, we highlight our framework's ability to execute emergent sounds and tasks -- sonic phenomena that transcend conventional audio generation -- unlocking new creative possibilities.",
+      "bibtex": "@misc{fugatto2025,\n  title={Fugatto},\n  author={Fugatto Team},\n  note={ICLR 2025, available at \\url{https://fugatto.github.io/}}\n}"
+    },
+    "OMCAT": {
+      "title": "OMCAT: Omni Context Aware Transformer",
+      "authors": ["Arushi Goel", "Karan Sapra", "Matthieu Le", "Rafael Valle", "Andrew Tao", "Bryan Catanzaro"],
+      "venue": "arXiv preprint",
+      "year": 2024,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2410.12109",
+        "website": "https://om-cat.github.io"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://om-cat.github.io/static/omcat-logo.jpg"
+      },
+      "abstract": "Large Language Models (LLMs) have made significant strides in text generation and comprehension, with recent advancements extending into multimodal LLMs that integrate visual and audio inputs. However, these models continue to struggle with fine-grained, cross-modal temporal understanding, particularly when correlating events across audio and video streams. We address these challenges with two key contributions: a carefully curated benchmark and model, called OCTAV and OMCAT respectively. OCTAV (Omni Context and Temporal Audio Video) is a benchmark capturing event transitions across audio and video. Second, OMCAT (Omni Context Aware Transformer) is a powerful model that leverages RoTE (Rotary Time Embeddings), an innovative extension of RoPE, to enhance temporal grounding and computational efficiency in time-anchored tasks.Our model demonstrates state-of-the-art performance on Audio-Visual Question Answering (AVQA) tasks and the OCTAV benchmark, showcasing significant gains in temporal reasoning and cross-modal alignment, as validated through comprehensive experiments and ablation studies. Both the OCTAV benchmark and the code will be made publicly available.",
+      "bibtex": "@article{goel2024omcat,\n  title={OMCAT: Omni context aware transformer},\n  author={Goel, A and Sapra, K and Le, M and Valle, R and Tao, A and Catanzaro, B},\n  journal={arXiv preprint arXiv:2410.12109},\n  year={2024}\n}"
+    },
+    "AUDIOFLAMINGO2": {
+      "title": "Audio Flamingo 2: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities",
+      "authors": ["Sreyan Ghosh", "Zhifeng Kong", "Sonal Kumar", "S Sakshi", "Jaehyeon Kim", "Wei Ping", "Rafael Valle", "Dinesh Manocha", "Bryan Catanzaro"],
+      "venue": "ICML",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2503.03983",
+        "website": "https://sites.google.com/view/audioflamingo2"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://airanonymous.github.io/af2_anon/af2/radar_af2_new_norm_sk-1.png"
+      },
+      "abstract": "Understanding and reasoning over non-speech sounds and music are crucial for both humans and AI agents to interact effectively with their environments. In this paper, we introduce Audio Flamingo 2 (AF2), an Audio-Language Model (ALM) with advanced audio understanding and reasoning capabilities. AF2 leverages (i) a custom CLAP model, (ii) synthetic AQA data for fine-grained audio reasoning, and (iii) a multi-stage curriculum learning strategy. AF2 achieves state-of-the-art performance with only a 3B parameter small language model, surpassing large open-source and proprietary models across 20+ benchmarks. Next, for the first time, we extend audio understanding to long audio segments (30 secs - 5 mins) and propose LongAudio, a large and novel dataset for training ALMs on long audio captioning and question-answering tasks. Fine-tuning AF2 on LongAudio leads to exceptional performance on our proposed LongAudioBench, an expert annotated benchmark for evaluating ALMs on long audio understanding capabilities. We conduct extensive ablation studies to confirm the efficacy of our approach. All code and data will be open-sourced.",
+      "bibtex": "@article{kong2024audio,\n  title={Audio Flamingo: An Audio-Language Model with Long-Audio Understanding and Expert Reasoning Abilities},\n  author={Sreyan Ghosh, Zhifeng Kong, Sonal Kumar, S Sakshi, Jaehyeon Kim, Wei Ping, Rafael Valle, Dinesh Manocha, Bryan Catanzaro},\n  journal={},\n  year={2025}\n}"
+    },
+    "KOELTTS": {
+      "title": "Koel-TTS: Enhancing LLM based Speech Generation with Preference Alignment and Classifier Free Guidance",
+      "authors": ["Shehzeen Hussain", "Paarth Neekhara", "Xuesong Yang", "Edresson Casanova", "Subhankar Ghosh", "Mikyas T. Desta", "Roy Fejgin", "Rafael Valle", "Jason Li"],
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2502.05236",
+        "website": "https://koeltts.github.io"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "https://koeltts.github.io/audio/koel_podcast.png",
+        "audio_src": "https://koeltts.github.io/audio/t5tts_podcast_ttstopic_demo_page.wav"
+      },
+      "abstract": "While autoregressive speech token generation models produce speech with remarkable variety and naturalness, their inherent lack of controllability often results in issues such as hallucinations and undesired vocalizations that do not conform to conditioning inputs. We introduce Koel-TTS, a suite of enhanced encoder-decoder Transformer TTS models that address these challenges by incorporating preference alignment techniques guided by automatic speech recognition and speaker verification models. Additionally, we incorporate classifier-free guidance to further improve synthesis adherence to the transcript and reference speaker audio. Our experiments demonstrate that these optimizations significantly enhance target speaker similarity, intelligibility, and naturalness of synthesized speech. Notably, Koel-TTS directly maps text and context audio to acoustic tokens, and on the aforementioned metrics, outperforms state-of-the-art TTS models, despite being trained on a significantly smaller dataset. Audio samples and demos are available on our website.",
+      "bibtex": "@article{hussain2025koelt,\n  title={Koel-TTS: Enhancing LLM based Speech Generation with Preference Alignment and Classifier Free Guidance},\n  author={Hussain, S and Neekhara, P and Yang, X and Casanova, E and Ghosh, S and Desta, MT and ...},\n  journal={arXiv preprint arXiv:2502.05236},\n  year={2025}\n}"
+    },
+    "UNIWAV": {
+      "title": "UniWav",
+      "authors": ["Alexander H. Liu", "Sang-gil Lee", "Chao-Han Huck Yang", "Yuan Gong", "Yu-Chiang Frank Wang", "James R. Glass", "Rafael Valle", "Bryan Catanzaro"],
+      "venue": "ICLR",
+      "year": 2025,
+      "links": {
+        "website": "https://research.nvidia.com/labs/twn/publication/iclr_2025_uniwav/"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/uniwav.png"
+      },
+      "abstract": "Pre-training and representation learning have been playing an increasingly important role in modern speech processing. Nevertheless, different applications have been relying on different foundation models, since predominant pre-training techniques are either designed for discriminative tasks or generative tasks. In this work, we make the first attempt at building a unified pre-training framework for both types of tasks in speech. We show that with the appropriate design choices for pre-training, one can jointly learn a representation encoder and generative audio decoder that can be applied to both types of tasks. We propose UniWav, an encoder-decoder framework designed to unify pre-training representation learning and generative tasks. On speech recognition, text-to-speech, and speech tokenization, UniWav achieves comparable performance to different existing foundation models, each trained on a specific task. Our findings suggest that a single general-purpose foundation model for speech can be built to replace different foundation models, reducing the overhead and cost of pre-training.",
+      "bibtex": "@misc{uniwav2025,\n  title={UniWav},\n  author={UniWav Team},\n  note={ICLR 2025, available at \\url{https://research.nvidia.com/labs/twn/publication/iclr_2025_uniwav/}}\n}"
+    },
+    "A2SB": {
+      "title": "A2SB: Audio-to-Audio Schrodinger Bridges",
+      "authors": ["Zhifeng Kong*", "Kevin J. Shih*", "Weili Nie", "Arash Vahdat", "Sang-gil Lee", "Joao Felipe Santos", "Ante Jukic", "Rafael Valle", "Bryan Catanzaro"],
+      "venue": "arXiv preprint",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2501.11311",
+        "website": "https://research.nvidia.com/labs/adlr/A2SB/"
+      },
+      "media": {
+        "type": "image_audio_multiple",
+        "image_src": "https://research.nvidia.com/labs/adlr/images/a2sb/A2SB_overview.png",
+        "audio_samples": [
+          {"label": "degraded", "src": "https://research.nvidia.com/labs/adlr/files/a2sb/showcase/bwe_1_Degraded.wav"},
+          {"label": "bandwidth expanded", "src": "https://research.nvidia.com/labs/adlr/files/a2sb/showcase/bwe_1_A2SB_4split.wav"}
+        ]
+      },
+      "abstract": "Audio in the real world may be perturbed due to numerous factors, causing the audio quality to be degraded. The following work presents an audio restoration model tailored for high-res music at 44.1kHz. Our model, Audio-to-Audio Schrodinger Bridges (A2SB), is capable of both bandwidth extension (predicting high-frequency components) and inpainting (re-generating missing segments). Critically, A2SB is end-to-end without need of a vocoder to predict waveform outputs, able to restore hour-long audio inputs, and trained on permissively licensed music data. A2SB is capable of achieving state-of-the-art bandwidth extension and inpainting quality on several out-of-distribution music test sets.",
+      "bibtex": "@article{kong2025a2sb,\n  title={A2SB: Audio-to-Audio Schrodinger Bridges},\n  author={Kong, Z and Shih, KJ and Nie, W and Vahdat, A and Lee, S and Santos, JF and Jukic, A and Valle, R and ...},\n  journal={arXiv preprint arXiv:2501.11311},\n  year={2025}\n}"
+    },
+    "ETTA": {
+      "title": "ETTA: Elucidating the Design Space of Text-to-Audio Models",
+      "authors": ["Sanggil Lee", "Zhifeng Kong", "Arushi Goel", "Sungwon Kim", "Rafael Valle", "Bryan Catanzaro"],
+      "venue": "ICML",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2412.19351",
+        "website": "https://research.nvidia.com/labs/adlr/ETTA/"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "https://research.nvidia.com/labs/adlr/images/etta/results_musiccaps.png",
+        "audio_src": "https://research.nvidia.com/labs/adlr/files/etta/showcase/etta/sample_1.wav",
+        "audio_caption": "A hip-hop track using sounds from a construction site--hammering nails as the beat, drilling sounds as scratches, and metal clanks as rhythm accents."
+      },
+      "abstract": "Recent years have seen significant progress in Text-To-Audio (TTA) synthesis, enabling users to enrich their creative workflows with synthetic audio generated from natural language prompts. Despite this progress, the effects of data, model architecture, training objective functions, and sampling strategies on target benchmarks are not well understood. With the purpose of providing a holistic understanding of the design space of TTA models, we set up a large-scale empirical experiment focused on diffusion and flow matching models. Our contributions include: 1) AF-Synthetic, a large dataset of high quality synthetic captions obtained from an audio understanding model; 2) a systematic comparison of different architectural, training, and inference design choices for TTA models; 3) an analysis of sampling methods and their Pareto curves with respect to generation quality and inference speed. We leverage the knowledge obtained from this extensive analysis to propose our best model dubbed Elucidated Text-To-Audio (ETTA). When evaluated on AudioCaps and MusicCaps, ETTA provides improvements over the baselines trained on publicly available data, while being competitive with models trained on proprietary data. Finally, we show ETTA's improved ability to generate creative audio following complex and imaginative captions -- a task that is more challenging than current benchmarks.",
+      "bibtex": "@article{lee2024etta,\n  title={ETTA: Elucidating the Design Space of Text-to-Audio Models},\n  author={Lee, S and Kong, Z and Goel, A and Kim, S and Valle, R and Catanzaro, B},\n  journal={arXiv preprint arXiv:2412.19351},\n  year={2024}\n}"
+    },
+    "TANGOFLUX": {
+      "title": "TangoFlux: Super Fast and Faithful Text to Audio Generation with Flow Matching and Clap-Ranked Preference Optimization",
+      "authors": ["Chia-Yu Hung", "Navonil Majumder", "Zhifeng Kong", "Ambuj Mehrish", "Rafael Valle", "Bryan Catanzaro", "Soujanya Poria"],
+      "venue": "arXiv preprint",
+      "year": 2024,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2412.21037",
+        "website": "https://huggingface.co/spaces/declare-lab/TangoFlux"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://github.com/declare-lab/TangoFlux/raw/main/assets/tf_teaser.png"
+      },
+      "abstract": "We introduce TangoFlux, an efficient Text-to-Audio (TTA) generative model with 515M parameters, capable of generating up to 30 seconds of 44.1kHz audio in just 3.7 seconds on a single A40 GPU. A key challenge in aligning TTA models lies in the difficulty of creating preference pairs, as TTA lacks structured mechanisms like verifiable rewards or gold-standard answers available for Large Language Models (LLMs). To address this, we propose CLAP-Ranked Preference Optimization (CRPO), a novel framework that iteratively generates and optimizes preference data to enhance TTA alignment. We demonstrate that the audio preference dataset generated using CRPO outperforms existing alternatives. With this framework, TangoFlux achieves state-of-the-art performance across both objective and subjective benchmarks. We open source all code and models to support further research in TTA generation.",
+      "bibtex": "@article{hung2024tangoflux,\n  title={TangoFlux: Super Fast and Faithful Text to Audio Generation with Flow Matching and Clap-Ranked Preference Optimization},\n  author={Hung, CY and Majumder, N and Kong, Z and Mehrish, A and Valle, R and Catanzaro, B and Poria, S},\n  journal={arXiv preprint},\n  year={2024}\n}"
+    },
+    "EXPRESSIVESINGER": {
+      "title": "ExpressiveSinger: Multilingual and multi-style score-based singing voice synthesis with expressive performance control",
+      "authors": ["Shuqi Dai", "Ming-Yu Liu", "Rafael Valle", "Siddharth Gururani"],
+      "venue": "ACM Multimedia",
+      "year": 2024,
+      "links": {
+        "paper": "https://openreview.net/pdf?id=y9J0PNOOrY",
+        "website": "https://expressivesinger.github.io/ExpressiveSinger"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "images/expressive_singer.png",
+        "audio_src": "https://expressivesinger.github.io/ExpressiveSinger/demo/exp2/Female4_LetItBe-Pop-%E6%8A%92%E6%83%85_generated.wav"
+      },
+      "abstract": "Singing Voice Synthesis (SVS) has significantly advanced with deep generative models, achieving high audio quality but still struggling with musicality, mainly due to the lack of performance control over timing, dynamics, and pitch, which are essential for music expression. Additionally, integrating data and supporting diverse languages and styles in SVS remain challenging. To tackle these issues, this paper presents ExpressiveSinger, an SVS framework that leverages a cascade of diffusion models to generate realistic singing across multiple languages, styles, and techniques from scores and lyrics. Our approach begins with consolidating, cleaning, annotating, and processing public singing datasets, developing a multilingual phoneme set, and incorporating different musical styles and techniques. We then design methods for generating expressive performance control signals including phoneme timing, F0 curves, and amplitude envelopes, which enhance musicality and model consistency, introduce more controllability, and reduce data requirements. Finally, we generate mel-spectrograms and audio from performance control signals with style guidance and singer timbre embedding. Our models also enable trained singers to sing in new languages and styles. Several listening tests reveal both musicality and controllability of our generated singing compared with existing works and human singing. We release the data for future research.",
+      "bibtex": "@inproceedings{dai2024expressivesinger,\n  title={Expressivesinger: Multilingual and multi-style score-based singing voice synthesis with expressive performance control},\n  author={Dai, S and Liu, MY and Valle, R and Gururani, S},\n  booktitle={Proc. 32nd ACM Multimedia},\n  pages={3229--3238},\n  year={2024}\n}"
+    },
+    "SYNTHIO": {
+      "title": "Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data",
+      "authors": ["Sreyan Ghosh", "Sonal Kumar", "Zhifeng Kong", "Rafael Valle", "Bryan Catanzaro", "Dinesh Manocha"],
+      "venue": "ICLR",
+      "year": 2025,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2410.02056"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/synthio.png"
+      },
+      "abstract": "[Abstract placeholder for Synthio. Explanation of synthetic data augmentation for audio classification…]",
+      "bibtex": "@article{ghosh2024synthio,\n  title={Synthio: Augmenting Small-Scale Audio Classification Datasets with Synthetic Data},\n  author={Ghosh, S and Kumar, S and Kong, Z and Valle, R and Catanzaro, B and Manocha, D},\n  journal={arXiv preprint arXiv:2410.02056},\n  year={2024}\n}"
+    },
+    "ROBUSTALIGN": {
+      "title": "Improving robustness of LLM-based speech synthesis by learning monotonic alignment",
+      "authors": ["Paarth Neekhara", "Shehzeen Hussain", "Subhankar Ghosh", "Jason Li", "Rafael Valle", "Rohan Badlani", "Boris Ginsburg"],
+      "venue": "arXiv preprint arXiv:2406.17957",
+      "year": 2024,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2406.17957"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/t5tts.png"
+      },
+      "abstract": "[Abstract placeholder for Robust Alignment. Discussion on learning monotonic alignments for LLM-based TTS…]",
+      "bibtex": "@article{neekhara2024robust,\n  title={Improving robustness of llm-based speech synthesis by learning monotonic alignment},\n  author={Neekhara, P and Hussain, S and Ghosh, S and Li, J and Valle, R and Badlani, R and Ginsburg, B},\n  journal={arXiv preprint arXiv:2406.17957},\n  year={2024}\n}"
+    },
+    "AUDIOFLAMINGO": {
+      "title": "Audio Flamingo: A Novel Audio Language Model with Few-Shot Learning and Dialogue Abilities",
+      "authors": ["Zhifeng Kong", "Arushi Goel", "Rohan Badlani", "Wei Ping", "Rafael Valle", "Bryan Catanzaro"],
+      "venue": "ICML",
+      "year": 2024,
+      "links": {
+        "arxiv": "https://arxiv.org/abs/2402.01831",
+        "website": "https://audioflamingo.github.io"
+      },
+      "media": {
+        "type": "youtube",
+        "src": "https://www.youtube.com/embed/ucttuS28RVE?si=eJP09UaUZR-qKz8p"
+      },
+      "abstract": "In this paper, we propose Audio Flamingo, a novel audio language model with 1) strong audio understanding abilities, 2) the ability to quickly adapt to unseen tasks via in-context learning and retrieval, and 3) strong multi-turn dialogue abilities. We introduce a series of training techniques, architecture design, and data strategies to enhance our model with these abilities. Extensive evaluations across various audio understanding tasks confirm the efficacy of our method, setting new state-of-the-art benchmarks.",
+      "bibtex": "@article{kong2024audio,\n  title={Audio Flamingo: A Novel Audio Language Model with Few-Shot Learning and Dialogue Abilities},\n  author={Kong, Zhifeng and Goel, Arushi and Badlani, Rohan and Ping, Wei and Valle, Rafael and Catanzaro, Bryan},\n  journal={arXiv preprint arXiv:2402.01831},\n  year={2024}\n}"
+    },
+    "PFLOW": {
+      "title": "P-Flow: A Fast and Data-Efficient Zero-Shot TTS through Speech Prompting",
+      "authors": ["Sungwon Kim", "Kevin Shih", "Rohan Badlani", "Joao Felipe Santos", "Evelina Bakhturina", "Mikyas Desta", "Rafael Valle", "Sungroh Yoon", "Bryan Catanzaro"],
+      "venue": "NEURIPS",
+      "year": 2023,
+      "links": {
+        "paper": "https://neurips.cc/virtual/2023/poster/69899",
+        "website": "https://pflow-demo.github.io/projects/pflow/"
+      },
+      "media": {
+        "type": "image_audio_multiple",
+        "image_src": "https://pflow-demo.github.io/projects/pflow/images/pflow/pflow-architecture.png",
+        "audio_samples": [
+          {"label": "reference", "src": "https://drive.google.com/uc?export=open&id=1YfMwSiXwOJzAgYE_3otR-i045Wm8H-jt"},
+          {"label": "P-Flow", "src": "https://drive.google.com/uc?export=open&id=1JjmFc8kBu99WgczZdXStxefn98gUNLN2"}
+        ]
+      },
+      "abstract": "While recent large-scale neural codec language models have shown significant improvement in zero-shot TTS by training on thousands of hours of data, they suffer from drawbacks such as a lack of robustness, slow sampling speed similar to previous autoregressive TTS methods, and reliance on pre-trained neural codec representations. Our work proposes P-Flow, a fast and data-efficient zero-shot TTS model that uses speech prompts for speaker adaptation. P-Flow comprises a speech-prompted text encoder for speaker adaptation and a flow matching generative decoder for high-quality and fast speech synthesis. Our speech-prompted text encoder uses speech prompts and text input to generate speaker-conditional text representation. The flow matching generative decoder uses the speaker-conditional output to synthesize high-quality personalized speech significantly faster than in real-time. Unlike the neural codec language models, we specifically train P-Flow on LibriTTS dataset using a continuous mel-representation. Through our training method using continuous speech prompts, P-Flow matches the speaker similarity performance of the large-scale zero-shot TTS models with two orders of magnitude less training data and has more than 20× faster sampling speed. Our results show that P-Flow has better pronunciation and is preferred in human likeness and speaker similarity to its recent state-of-the-art counterparts, thus defining P-Flow as an attractive and desirable alternative.",
+      "bibtex": ""
+    },
+    "RADMMM": {
+      "title": "RADMMM: Multilingual Multiaccented Multispeaker Text-to-Speech",
+      "authors": ["Rohan Badlani", "Rafael Valle", "Kevin J. Shih", "João Felipe Santos", "Siddhart Gururani", "Bryan Catanzaro"],
+      "venue": "Interspeech",
+      "year": 2023,
+      "links": {
+        "paper": "https://www.isca-speech.org/archive/pdfs/interspeech_2023/badlani23_interspeech.pdf",
+        "arxiv": "https://arxiv.org/abs/2301.10335",
+        "website": "https://research.nvidia.com/labs/adlr/projects/radmmm/",
+        "code": "https://github.com/nvidia/rad-mmm"
+      },
+      "media": {
+        "type": "image_audio_multiple",
+        "image_src": "https://research.nvidia.com/labs/adlr/images/radmmm/radmmm_overview.png",
+        "audio_samples": [
+          {"label": "Seen (French)", "src": "http://docs.google.com/uc?export=open&id=1kzJBE8QU8PHY6OhJwFXM_jSJtX8dkHxU"},
+          {"label": "Unseen (German)", "src": "http://docs.google.com/uc?export=open&id=1W6p3sbYeky3ApjdVV077_9PMXtk_dx_U"},
+          {"label": "Unseen (Hindi)", "src": "http://docs.google.com/uc?export=open&id=1fG2R04rPLlQYzEmg6cgKE-nywAg1JIAL"},
+          {"label": "Unseen (Spanish)", "src": "http://docs.google.com/uc?export=open&id=19qw9EC0IYPvFaVVwBJg2HOb9vIjMMFuS"}
+        ]
+      },
+      "abstract": "We work to create a multilingual speech synthesis system which can generate speech with the proper accent while retaining the characteristics of an individual voice. This is challenging to do because it is expensive to obtain bilingual training data in multiple languages, and the lack of such data results in strong correlations that entangle speaker, language, and accent, resulting in poor transfer capabilities. To overcome this, we present a multilingual, multiaccented, multispeaker speech synthesis model based on RADTTS with explicit control over accent, language, speaker and fine-grained F0 and energy features. Our proposed model does not rely on bilingual training data. We demonstrate an ability to control synthesized accent for any speaker in an open-source dataset comprising of 7 accents. Human subjective evaluation demonstrates that our model can better retain a speaker's voice and accent quality than controlled baselines while synthesizing fluent speech in all target languages and accents in our dataset.",
+      "bibtex": "@inproceedings{badlani23_interspeech,\n  author={Rohan Badlani and Rafael Valle and Kevin J. Shih and João Felipe Santos and Siddharth Gururani and Bryan Catanzaro},\n  title={{RAD-MMM: Multilingual Multiaccented Multispeaker Text To Speech}},\n  year=2023,\n  booktitle={Proc. INTERSPEECH 2023},\n  pages={626--630},\n  doi={10.21437/Interspeech.2023-2330}\n}"
+    },
+    "SELFVC": {
+      "title": "SelfVC: Voice Conversion With Iterative Refinement using Self Transformations",
+      "authors": ["Paarth Neekhara", "Shehzeen Hussain", "Rafael Valle", "Boris Ginsburg", "Rishabh Ranjan", "Shlomo Dubnov", "Farinaz Koushanfar", "Julian McAuley"],
+      "venue": "ICML",
+      "year": 2024,
+      "links": {
+        "paper": "https://openreview.net/pdf/38cba2cbfd9b77e0e8c337408b64f027ed5af12c.pdf",
+        "arxiv": "https://arxiv.org/abs/2310.09653v1",
+        "website": "https://selfspeechsynthesis.github.io/"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/selfvc.png"
+      },
+      "abstract": "We propose SelfVC, a training strategy to iteratively improve a voice conversion model with self-synthesized examples. Previous efforts on voice conversion focus on explicitly disentangling speech representations to separately encode speaker characteristics and linguistic content. However, disentangling speech representations to capture such attributes using task-specific loss terms can lead to information loss by discarding finer nuances of the original signal. In this work, instead of explicitly disentangling attributes with loss terms, we present a framework to train a controllable voice conversion model on entangled speech representations derived from self-supervised learning and speaker verification models. First, we develop techniques to derive prosodic information from the audio signal and SSL representations to train predictive submodules in the synthesis model. Next, we propose a training strategy to iteratively improve the synthesis model for voice conversion, by creating a challenging training objective using self-synthesized examples. In this training approach, the current state of the synthesis model is used to generate voice-converted variations of an utterance, which serve as inputs for the reconstruction task, ensuring a continuous and purposeful refinement of the model. We demonstrate that incorporating such self-synthesized examples during training improves the speaker similarity of generated speech as compared to a baseline voice conversion model trained solely on heuristically perturbed inputs. SelfVC is trained without any text and is applicable to a range of tasks such as zero-shot voice conversion, cross-lingual voice conversion, and controllable speech synthesis with pitch and pace modifications. SelfVC achieves state-of-the-art results in zero-shot voice conversion on metrics evaluating naturalness, speaker similarity, and intelligibility of synthesized audio.",
+      "bibtex": ""
+    },
+    "SPACE": {
+      "title": "SPACE: Speech-driven Portrait Animation with Controllable Expression",
+      "authors": ["Siddharth Gururani", "Arun Mallya", "Ting-Chun Wang", "Rafael Valle", "Ming-Yu Liu"],
+      "venue": "ICCV",
+      "year": 2023,
+      "links": {
+        "paper": "https://arxiv.org/pdf/2211.09809.pdf",
+        "arxiv": "https://arxiv.org/abs/2211.09809",
+        "website": "https://research.nvidia.com/labs/dir/space/"
+      },
+      "media": {
+        "type": "image_youtube",
+        "image_src": "https://research.nvidia.com/labs/dir/space/data/method/overview.png",
+        "youtube_src": "https://www.youtube.com/embed/DdCvJ8JI2-M?si=zugEVrxq6tsX_LwJ"
+      },
+      "abstract": "Animating portraits using speech has received growing attention in recent years, with various creative and practical use cases. An ideal generated video should have good lip sync with the audio, natural facial expressions and head motions, and high frame quality. In this work, we present SPACE, which uses speech and a single image to generate high-resolution, and expressive videos with realistic head pose, without requiring a driving video. It uses a multi-stage approach, combining the controllability of facial landmarks with the high-quality synthesis power of a pretrained face generator. SPACE also allows for the control of emotions and their intensities. Our method outperforms prior methods in objective metrics for image quality and facial motions and is strongly preferred by users in pair-wise comparisons.",
+      "bibtex": "@inproceedings{gururani2023space,\n  title={SPACE: Speech-driven Portrait Animation with Controllable Expression},\n  author={Gururani, Siddharth and Mallya, Arun and Wang, Ting-Chun and Valle, Rafael and Liu, Ming-Yu},\n  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},\n  pages={20914--20923},\n  year={2023}\n}"
+    },
+    "RADPP": {
+      "title": "High-Acoustic Fidelity Text To Speech Synthesis With Fine-Grained Control Of Speech Attributes",
+      "authors": ["Rafael Valle", "João Felipe Santos", "Kevin J. Shih", "Rohan Badlani", "Bryan Catanzaro"],
+      "venue": "ICASSP",
+      "year": 2023,
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/document/10096279",
+        "website": "https://research.nvidia.com/labs/adlr/RADTTS/",
+        "code": "https://github.com/nvidia/radtts"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "images/radpp.png",
+        "audio_src": "http://docs.google.com/uc?export=open&id=1f85rgFrKDrSkq_V52cpgXSROtje6IWI1"
+      },
+      "abstract": "Recently developed neural-based TTS models have focused on robustness and finer control over acoustic features such as phoneme duration, energy, and F0, allowing users to have some degree of control over the prosody of the generated speech. We propose a model with fine grained attribute control, which also has better acoustic fidelity (attributes of the output which we want to control do not deviate from the control signals) than previously proposed models as shown in our experiments. Unlike other models, our proposed model does not require fine-tuning the vocoder on its outputs, indicating that it generates higher quality mel-spectrograms that are closer to the ground-truth distribution than that of other models.",
+      "bibtex": "@inproceedings{valle2023high,\n  title={High-Acoustic Fidelity Text To Speech Synthesis With Fine-Grained Control Of Speech Attributes},\n  author={Valle, Rafael and Santos, Jo{\\~a}o Felipe and Shih, Kevin J and Badlani, Rohan and Catanzaro, Bryan},\n  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={1--5},\n  year={2023},\n  organization={IEEE}\n}"
+    },
+    "ANYTOANY": {
+      "title": "Any-to-Any Voice Conversion with F0 and Timbre Disentanglement and Novel Timbre Conditioning",
+      "authors": ["Sudheer Kovela", "Rafael Valle", "Ambrish Dantrey", "Bryan Catanzaro"],
+      "venue": "ICASSP",
+      "year": 2023,
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/document/10096220"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/anytoanyvc.png"
+      },
+      "abstract": "Despite recent advances in voice conversion (VC), it is still challenging to do real-time one-shot voice conversion with good control over timbre and F0. In this work, we present a PPG-based VC model that directly decodes waveforms. We designed a speaker conditioned decoder based on HiFi-GAN, along with a new discriminator that produces high quality audio. Using an F0 prenet and F0 augmented speaker encoder, we are able to control F0 and timbre independently with high fidelity. Our objective and subjective evaluations show that our method is preferred over others in terms of audio quality, timbre similarity and prosody retention.",
+      "bibtex": "@inproceedings{kovela2023any,\n  title={Any-to-Any Voice Conversion with F 0 and Timbre Disentanglement and Novel Timbre Conditioning},\n  author={Kovela, Sudheer and Valle, Rafael and Dantrey, Ambrish and Catanzaro, Bryan},\n  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={1--5},\n  year={2023},\n  organization={IEEE}\n}"
+    },
+    "VANI": {
+      "title": "VANI: Very-lightweight Accent-controllable TTS for Native and Non-native speakers with Identity Preservation",
+      "authors": ["Rohan Badlani", "Ashish Arora", "Subhankar Ghosh", "Rafael Valle", "Kevin J. Shih", "João Felipe Santos", "Boris Ginsburg", "Bryan Catanzaro"],
+      "venue": "ICASSP",
+      "year": 2023,
+      "links": {
+        "paper": "https://arxiv.org/pdf/2303.07578.pdf",
+        "arxiv": "https://arxiv.org/abs/2303.07578",
+        "website": "https://research.nvidia.com/labs/adlr/projects/radmmm/",
+        "code": "https://github.com/nvidia/radmmm"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/vani.png"
+      },
+      "abstract": "We introduce VANI, a very lightweight multi-lingual accent controllable speech synthesis system. Our model builds upon disentanglement strategies proposed in RADMMM and supports explicit control of accent, language, speaker and fine-grained F0 and energy features for speech synthesis. We utilize the Indic languages dataset, released for LIMMITS 2023 as part of ICASSP Signal Processing Grand Challenge, to synthesize speech in 3 different languages. Our model supports transferring the language of a speaker while retaining their voice and the native accent of the target language. We utilize the large-parameter RADMMM model for Track 1 and lightweight VANI model for Track 2 and 3 of the competition.",
+      "bibtex": "@inproceedings{badlani2023vani,\n  title={VANI: Very-lightweight Accent-controllable TTS for Native and Non-native speakers with Identity Preservation},\n  author={Badlani, Rohan and Arora, Akshit and Ghosh, Subhankar and Valle, Rafael and Shih, Kevin J and Santos, Jo{\\~a}o Felipe and Ginsburg, Boris and Catanzaro, Bryan},\n  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={1--2},\n  year={2023},\n  organization={IEEE}\n}"
+    },
+    "OTA": {
+      "title": "One TTS Alignment to Rule Them All",
+      "authors": ["Rohan Badlani", "Adrian Łańcucki", "Kevin J. Shih", "Rafael Valle"],
+      "venue": "ICASSP",
+      "year": 2022,
+      "links": {
+        "paper": "https://arxiv.org/pdf/2108.10447.pdf",
+        "arxiv": "https://arxiv.org/abs/2108.10447",
+        "website": "https://research.nvidia.com/labs/adlr/one-tts-alignment/",
+        "code": "https://github.com/nvidia/radtts"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://research.nvidia.com/labs/adlr/images/onetts_alignment_model.png"
+      },
+      "abstract": "Speech-to-text alignment is a critical component of neural text-to-speech (TTS) models. Autoregressive TTS models typically use an attention mechanism to learn these alignments on-line. However, these alignments tend to be brittle and often fail to generalize to long utterances and out-of-domain text, leading to missing or repeating words. Most non-autoregressive end-to-end TTS models rely on durations extracted from external sources. In this paper we leverage the alignment mechanism proposed in RAD-TTS and demonstrate its applicability to wide variety of neural TTS models. The alignment learning framework combines the forward-sum algorithm, Viterbi algorithm, and an efficient static prior. In our experiments, the framework improves all tested TTS architectures, both autoregressive (Flowtron, Tacotron 2) and non-autoregressive (FastPitch, FastSpeech 2, RAD-TTS). Specifically, it improves alignment convergence speed, simplifies the training pipeline by eliminating need for external aligners, enhances robustness to errors on long utterances and improves the perceived speech synthesis quality, as judged by human evaluators.",
+      "bibtex": "@inproceedings{badlani2022one,\n  title={One TTS alignment to rule them all},\n  author={Badlani, Rohan and {\\L}a{\\'n}cucki, Adrian and Shih, Kevin J and Valle, Rafael and Ping, Wei and Catanzaro, Bryan},\n  booktitle={ICASSP 2022-2022 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},\n  pages={6092--6096},\n  year={2022},\n  organization={IEEE}\n}"
+    },
+    "GML": {
+      "title": "Generative modeling for low dimensional speech attributes with neural spline flows",
+      "authors": ["Kevin J. Shih", "Rafael Valle", "Rohan Badlani", "Bryan Catanzaro"],
+      "venue": "arXiv",
+      "year": 2022,
+      "links": {
+        "paper": "https://arxiv.org/pdf/2203.01786.pdf",
+        "arxiv": "https://arxiv.org/abs/2203.01786",
+        "website": "https://research.nvidia.com/labs/adlr/RADTTS/",
+        "code": "https://github.com/nvidia/radtts"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://research.nvidia.com/labs/adlr/images/radtts_logo.png"
+      },
+      "abstract": "Despite recent advances in generative modeling for text-to-speech synthesis, these models do not yet have the same fine-grained adjustability of pitch-conditioned deterministic models such as FastPitch and FastSpeech2. Pitch information is not only low-dimensional, but also discontinuous, making it particularly difficult to model in a generative setting. Our work explores several techniques for handling the aforementioned issues in the context of Normalizing Flow models. We also find this problem to be very well suited for Neural Spline flows, which is a highly expressive alternative to the more common affine-coupling mechanism in Normalizing Flows.",
+      "bibtex": "@article{shih2022generative,\n  title={Generative modeling for low dimensional speech attributes with neural spline flows},\n  author={Shih, Kevin J and Valle, Rafael and Badlani, Rohan and Santos, Jo{\\~a}o Felipe and Catanzaro, Bryan},\n  journal={arXiv preprint arXiv:2203.01786},\n  year={2022}\n}"
+    },
+    "RADTTS": {
+      "title": "RAD-TTS: Parallel flow-based TTS with robust alignment learning and diverse synthesis",
+      "authors": ["Kevin J. Shih", "Rafael Valle", "Rohan Badlani", "Adrian Lancucki", "Wei Ping", "Bryan Catanzaro"],
+      "venue": "ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models",
+      "year": 2021,
+      "links": {
+        "paper": "https://openreview.net/pdf?id=0NQwnnwAORi",
+        "website": "https://research.nvidia.com/labs/adlr/RADTTS/",
+        "code": "https://github.com/nvidia/radtts"
+      },
+      "media": {
+        "type": "image",
+        "src": "https://research.nvidia.com/labs/adlr/images/radtts_logo.png"
+      },
+      "abstract": "This work introduces a predominantly parallel, end-to-end TTS model based on normalizing flows. It extends prior parallel approaches by additionally modeling speech rhythm as a separate generative distribution to facilitate variable token duration during inference. We further propose a robust framework for the on-line extraction of speech-text alignments - a critical yet highly unstable learning problem in end-to-end TTS frameworks. Our experiments demonstrate that our proposed techniques yield improved alignment quality, better output diversity compared to controlled baselines.",
+      "bibtex": "@inproceedings{shih2021rad,\n  title={RAD-TTS: Parallel flow-based TTS with robust alignment learning and diverse synthesis},\n  author={Shih, Kevin J and Valle, Rafael and Badlani, Rohan and Lancucki, Adrian and Ping, Wei and Catanzaro, Bryan},\n  booktitle={ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models},\n  year={2021}\n}"
+    },
+    "CBH": {
+      "title": "Character-based handwritten text transcription with attention networks",
+      "authors": ["Jason Poulos", "Rafael Valle"],
+      "venue": "Neural Computing and Applications",
+      "year": 2021,
+      "links": {
+        "paper": "https://link.springer.com/article/10.1007/s00521-021-05813-1",
+        "arxiv": "https://arxiv.org/abs/1712.04046"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/cbh.png"
+      },
+      "abstract": "The paper approaches the task of handwritten text recognition (HTR) with attentional encoder-decoder networks trained on sequences of characters, rather than words. We experiment on lines of text from popular handwriting datasets and compare different activation functions for the attention mechanism used for aligning image pixels and target characters. We find that softmax attention focuses heavily on individual characters, while sigmoid attention focuses on multiple characters at each step of the decoding. When the sequence alignment is one-to-one, softmax attention is able to learn a more precise alignment at each step of the decoding, whereas the alignment generated by sigmoid attention is much less precise. When a linear function is used to obtain attention weights, the model predicts a character by looking at the entire sequence of characters and performs poorly because it lacks a precise alignment between the source and target. Future research may explore HTR in natural scene images, since the model is capable of transcribing handwritten text without the need for producing segmentations or bounding boxes of text in images.",
+      "bibtex": "@article{poulos2021character,\n  title={Character-based handwritten text transcription with attention networks},\n  author={Poulos, Jason and Valle, Rafael},\n  journal={Neural Computing and Applications},\n  volume={33},\n  number={16},\n  pages={10563--10573},\n  year={2021},\n  publisher={Springer}\n}"
+    },
+    "KEYWORD": {
+      "title": "Improving Keyword Spotting with Synthetic Speech",
+      "authors": ["U. Vaidya", "Rafael Valle", "M. Jain", "U. Ahmed", "V. Karandikar", "S. S. Chauhan", "Bryan Catanzaro"],
+      "venue": "",
+      "year": null,
+      "links": {},
+      "media": {
+        "type": "image",
+        "src": "images/improving_kws.png"
+      },
+      "abstract": "In this paper we describe a method that uses text-to-speech (TTS) synthesis models to improve the quality of keyword spotting models and to reduce the time and money required to train them. We synthesize varied data from different speakers by combining Flowtron, a multispeaker text-to-mel-spectrogram synthesis model producing speech with high variance, and WaveGlow, a universal mel-spectrogram to audio model. We fine-tune the synthetic data by using QuartzNet, an automatic speech recognition model, to find and remove samples with skipped, repeated and mispronounced words. With this fine-tuned synthetic data and 10% of human data we are able to achieve keyword spotting scores (accuracy and F1) that are comparable to using the full human dataset. We provide results on binary and multiclass Wake-up-Word datasets, including the Speech Commands Dataset.",
+      "bibtex": ""
+    },
+    "FLOWTRON": {
+      "title": "Flowtron: an Autoregressive Flow-based Generative Network for Text-to-Speech Synthesis",
+      "authors": ["Rafael Valle", "Kevin Shih", "Ryan Prenger", "Bryan Catanzaro"],
+      "venue": "arXiv 2019 - ICLR 2020",
+      "year": 2020,
+      "links": {
+        "paper": "https://arxiv.org/abs/2005.05957",
+        "website": "https://nv-adlr.github.io/Flowtron"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "https://nv-adlr.github.io/images/flowtron_logo.png",
+        "audio_src": "http://docs.google.com/uc?export=open&id=1bngjG6bMUWQi8aIugWhrFPWNHrNAokZF"
+      },
+      "abstract": "In our recent paper, we propose Flowtron: an autoregressive flow-based generative network for text-to-speech synthesis with control over speech variation and style transfer. Flowtron combines insights from IAF and optimizes Tacotron 2 in order to provide high-quality and controllable mel-spectrogram synthesis.",
+      "bibtex": ""
+    },
+    "NEURALODE": {
+      "title": "Neural ODEs for Image Segmentation with Level Sets",
+      "authors": ["Rafael Valle", "Fitsum Reda", "Mohammad Shoeybi", "Patrick Legresley", "Andrew Tao", "Bryan Catanzaro"],
+      "venue": "arXiv",
+      "year": 2019,
+      "links": {
+        "paper": "https://arxiv.org/pdf/1912.11683.pdf"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/ecssd_0282_contour.png"
+      },
+      "abstract": "We propose a novel approach for image segmentation that combines Neural Ordinary Differential Equations (NODEs) and the Level Set method. Our approach parametrizes the evolution of an initial contour with a NODE that implicitly learns from data a speed function describing the evolution. In addition, for cases where an initial contour is not available and to alleviate the need for careful choice or design of contour embedding functions, we propose a NODE-based method that evolves an image embedding into a dense per-pixel semantic label space. We evaluate our methods on kidney segmentation (KiTS19) and on salient object detection (PASCAL-S, ECSSD and HKU-IS). In addition to improving initial contours provided by deep learning models while using a fraction of their number of parameters, our approach achieves F scores that are higher than several state-of-the-art deep learning algorithms.",
+      "bibtex": ""
+    },
+    "MELLOTRON": {
+      "title": "Mellotron: Multispeaker expressive voice synthesis by conditioning on rhythm, pitch and global style tokens",
+      "authors": ["Rafael Valle*", "Jason Li*", "Ryan Prenger", "Bryan Catanzaro"],
+      "venue": "arXiv 2019 - ICASSP 2020",
+      "year": 2020,
+      "links": {
+        "paper": "https://arxiv.org/abs/1910.11997",
+        "website": "https://nv-adlr.github.io/Mellotron"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "https://nv-adlr.github.io/images/mellotron_logo.png",
+        "audio_src": "http://docs.google.com/uc?export=open&id=1QFWDsrt9-iGY63bpKE-u-V1X5kE1wAvO"
+      },
+      "abstract": "Mellotron is a multispeaker voice synthesis model based on Tacotron 2 GST that can make a voice emote and sing without emotive or singing training data. By explicitly conditioning on rhythm and continuous pitch contours from an audio signal or music score, Mellotron is able to generate speech in a variety of styles ranging from read speech to expressive speech, from slow drawls to rap and from monotonous voice to singing voice.",
+      "bibtex": ""
+    },
+    "WAVEGLOW": {
+      "title": "WaveGlow: a Flow-based Generative Network for Speech Synthesis",
+      "authors": ["Ryan Prenger", "Rafael Valle", "Bryan Catanzaro"],
+      "venue": "ICASSP",
+      "year": 2019,
+      "links": {
+        "paper": "https://arxiv.org/abs/1807.04919",
+        "website": "https://nv-adlr.github.io/WaveGlow"
+      },
+      "media": {
+        "type": "image_audio",
+        "image_src": "https://nv-adlr.github.io/images/waveglow_logo.png",
+        "audio_src": "http://docs.google.com/uc?export=open&id=1KOHZIr7iTupo13EAKpbdmjcbATPsV02i"
+      },
+      "abstract": "We propose WaveGlow: a flow-based network capable of generating high quality speech from mel-spectrograms. WaveGlow combines insights from Glow and WaveNet in order to provide fast, efficient and high-quality audio synthesis, without the need for auto-regression. WaveGlow is implemented using only a single network, trained using only a single cost function: maximizing the likelihood of the training data, which makes the training procedure simple and stable.",
+      "bibtex": ""
+    },
+    "IPGAN": {
+      "title": "TequilaGAN: How to easily identify GAN samples",
+      "authors": ["Rafael Valle", "Wilson Cai", "Anish Doshi"],
+      "venue": "arXiv",
+      "year": 2018,
+      "links": {
+        "paper": "https://arxiv.org/abs/1807.04919",
+        "website": "https://github.com/rafaelvalle/ipgans/"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/ipgan.png"
+      },
+      "abstract": "In this paper we show strategies to easily identify fake samples generated with the Generative Adversarial Network framework. One strategy is based on the statistical analysis and comparison of raw pixel values and features extracted from them. The other strategy learns formal specifications from the real data and shows that fake samples violate the specifications of the real data. We show that fake samples produced with GANs have a universal signature that can be used to identify fake samples. We provide results on MNIST, CIFAR10, music and speech data.",
+      "bibtex": ""
+    },
+    "ASRGEN": {
+      "title": "Attacking Speaker Recognition with Deep Generative Models",
+      "authors": ["Anish Doshi", "Wilson Cai", "Rafael Valle"],
+      "venue": "arXiv",
+      "year": 2017,
+      "links": {
+        "paper": "https://arxiv.org/pdf/1801.02384.pdf",
+        "code": "https://github.com/rafaelvalle/asrgen"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/conf_mat_cnn_knn.png"
+      },
+      "abstract": "In this paper we investigate the ability of generative adversarial networks (GANs) to synthesize spoofing attacks on modern speaker recognition systems. We first show that samples generated with SampleRNN and WaveNet are unable to fool a CNN-based speaker recognition system. We propose a modification of the Wasserstein GAN objective function to make use of data that is real but not from the class being learned. Our semi-supervised learning method is able to perform both targeted and untargeted attacks, raising questions related to security in speaker authentication systems.",
+      "bibtex": ""
+    },
+    "SEQGAN": {
+      "title": "Sequence Generation with GANs",
+      "authors": ["Rafael Valle"],
+      "venue": "",
+      "year": 2017,
+      "links": {
+        "code": "http://github.com/rafaelvalle/neural_network_control_improvisation",
+        "audio": "https://soundcloud.com/d_alma/sets/improved-wasserstein-gans-piano"
+      },
+      "media": {
+        "type": "soundcloud",
+        "src": "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/325582916&amp;color=0066cc&amp;auto_play=false&amp;hide_related=true&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;show_artwork=false"
+      },
+      "abstract": "In this paper we investigate the generation of sequences using generative adversarial networks (GANs). We open the paper by providing a brief introduction to sequence generation and challenges in GANs. We briefly describe encoding strategies for text and MIDI data in light of their use with convolutional architectures. In our experiments we consider the unconditional generation of polyphonic and monophonic piano roll generation as well as short sequences. For each data type, we provide sonic or text examples of generated data, interpolation in the latent space and vector arithmetic.",
+      "bibtex": ""
+    },
+    "ABROA": {
+      "title": "Audio-Based Room Occupancy Analysis using Gaussian Mixtures and Hidden Markov Models",
+      "authors": ["Rafael Valle"],
+      "venue": "Future Technologies Conference (FTC) 2016, Detection and Classification of Acoustic Scenes and Events 2016",
+      "year": 2016,
+      "links": {
+        "paper": "https://arxiv.org/pdf/1607.07801.pdf",
+        "arxiv": "https://arxiv.org/abs/1607.07801",
+        "code": "https://github.com/rafaelvalle/machine_listening"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/abroa.png"
+      },
+      "abstract": "This paper outlines preliminary steps towards the development of an audio based room-occupancy analysis model. Our approach borrows from speech recognition tradition and is based on Gaussian Mixtures and Hidden Markov Models. We analyze possible challenges encountered in the development of such a model, and offer several solutions including feature design and prediction strategies. We provide results obtained from experiments with audio data from a retail store in Palo Alto, California. Model assessment is done via leave-two-out Bootstrap and model convergence achieves good accuracy, thus representing a contribution to multimodal people counting algorithms.",
+      "bibtex": "@article{valle2016abroa,\n  title={ABROA: Audio-Based Room-Occupancy Analysis using Gaussian Mixtures and Hidden Markov Models},\n  author={Valle, Rafael},\n  journal={arXiv preprint arXiv:1607.07801},\n  year={2016}\n}"
+    },
+    "MDI": {
+      "title": "Missing Data Imputation for Supervised Classification",
+      "authors": ["Jason Poulos", "Rafael Valle"],
+      "venue": "Applied Artificial Intelligence",
+      "year": 2018,
+      "links": {
+        "paper": "https://arxiv.org/pdf/1610.09075.pdf",
+        "arxiv": "https://arxiv.org/pdf/1610.09075",
+        "code": "https://github.com/rafaelvalle/mdi"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/mdi.png"
+      },
+      "abstract": "This paper compares methods for imputing missing categorical data for supervised learning tasks. The ability of researchers to accurately fit a model and yield unbiased estimates may be compromised by missing data, which are prevalent in survey-based social science research. We experiment on two machine learning benchmark datasets with missing categorical data, comparing classifiers trained on non-imputed (i.e., one-hot encoded) or imputed data with different degrees of missing data perturbation. The results show imputation methods can increase predictive accuracy in the presence of missing-data perturbation. Additionally, we find that for imputed models, missing data perturbation can improve prediction accuracy by regularizing the classifier.",
+      "bibtex": "@article{poulos2016missing,\n  title={Missing Data Imputation for Supervised Learning},\n  author={Poulos, Jason and Valle, Rafael},\n  journal={arXiv preprint arXiv:1610.09075},\n  year={2016}\n}"
+    },
+    "PATTGRAPH": {
+      "title": "Learning and Visualizing Music Specifications using Pattern Graphs",
+      "authors": ["Rafael Valle", "Daniel Fremont", "Ilge Akkaya", "Alexandre Donze", "Adrian Freed", "Sanjit Seshia"],
+      "venue": "ISMIR",
+      "year": 2016,
+      "links": {
+        "paper": "https://wp.nyu.edu/ismir2016/wp-content/uploads/sites/2294/2016/07/280_Paper.pdf",
+        "code": "https://github.com/rafaelvalle/music_pattern_graphs"
+      },
+      "media": {
+        "type": "image",
+        "src": "images/pattgraph.png"
+      },
+      "abstract": "We describe a system to learn and visualize specifications from song(s) in symbolic and audio formats. The core of our approach is based on a software engineering procedure called specification mining. Our procedure extracts patterns from feature vectors and uses them to build pattern graphs. The feature vectors are created by segmenting song(s) and extracting time and and frequency domain features from them, such as chromagrams, chord degree and interval classification. The pattern graphs built on these feature vectors provide the likelihood of a pattern between nodes, as well as start and ending nodes. The pattern graphs learned from a song(s) describe formal specifications that can be used for human interpretable quantitatively and qualitatively song comparison or to perform supervisory control in machine improvisation. We offer results in song summarization, song and style validation and machine improvisation with formal specifications.",
+      "bibtex": "@inproceedings{valle2016learning,\n  title={Learning and Visualizing Music Specifications using Pattern Graphs},\n  author={Valle, Rafael and Fremont, Daniel J and Akkaya, Ilge and Donze, Alexandre and Freed, Adrian and Seshia, Sanjit S},\n  booktitleaddon= {Proceedings of the Seventeenth ISMIR Conference},\n  booktitle={ISMIR},\n  year={2016}\n}"
+    }
+  }
+}

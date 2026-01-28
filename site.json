@@ -1,0 +1,86 @@
+{
+  "config": {
+    "ownerName": "Rafael Valle",
+    "highlightColor": "deeppink"
+  },
+  "sections": [
+    {
+      "id": "news",
+      "title": "News",
+      "type": "news",
+      "entries": [
+        { "id": "OMNIVINCI", "text": "Enhancing architecture and data for omni-modal understanding. (ICLR 2026)" },
+        { "id": "UALM", "text": "Unified audio language model for understanding, generation and reasoning. (ICLR 2026)" },
+        { "id": "AUDIO", "text": "Audio Flamingo 3 advances audio intelligence with fully open large audio language models. (NeurIPS 2026)" },
+        { "id": "FUGATTO", "text": "Foundational Generative Audio Transformer Opus 1", "suffix": " – <a target=\"_blank\" href=\"https://x.com/keunwoochoi/status/1861160370699632836\">\"The first ChatGPT moment (or Llama3 moment) in audio/music/speech.\"</a> (ICLR 2025)." },
+        { "id": "AUDIOFLAMINGO2", "text": "SOTA audio reasoning model topping <a target=\"_blank\" href=\"https://arxiv.org/abs/2410.19168\">MMAU</a>." },
+        { "id": "OMCAT", "text": "Omni Context Aware Transformer with efficient cross-modal temporal alignment." },
+        { "id": "UNIWAV", "text": "a unified framework for waveform generation (ICLR 2025)." },
+        { "id": "KOELTTS", "text": "enhanced LLM-based speech generation with preference alignment and classifier free guidance." },
+        { "id": "A2SB", "text": "audio-to-audio Schrodinger Bridges for improved audio enhancement." },
+        { "id": "ETTA", "text": "Ellucidating the design space of Text-To-Audio models." },
+        { "id": "TANGOFLUX", "text": "super fast and faithful text-to-audio generation with flow matching (2024)." }
+      ]
+    },
+    {
+      "id": "publications",
+      "title": "Publications",
+      "type": "publications",
+      "entries": [
+        "OMNIVINCI",
+        "UALM",
+        "AUDIO",
+        "FUGATTO",
+        "OMCAT",
+        "AUDIOFLAMINGO2",
+        "KOELTTS",
+        "UNIWAV",
+        "A2SB",
+        "ETTA",
+        "TANGOFLUX",
+        "EXPRESSIVESINGER",
+        "SYNTHIO",
+        "ROBUSTALIGN",
+        "AUDIOFLAMINGO",
+        "PFLOW",
+        "RADMMM",
+        "SELFVC",
+        "SPACE",
+        "RADPP",
+        "ANYTOANY",
+        "VANI",
+        "OTA",
+        "GML",
+        "RADTTS",
+        "CBH",
+        "KEYWORD",
+        "FLOWTRON",
+        "NEURALODE",
+        "MELLOTRON",
+        "WAVEGLOW",
+        "IPGAN",
+        "ASRGEN",
+        "SEQGAN",
+        "ABROA",
+        "MDI",
+        "PATTGRAPH"
+      ]
+    }
+  ],
+  "newBadgeIds": [
+    "OMNIVINCI",
+    "UALM",
+    "AUDIO",
+    "FUGATTO",
+    "OMCAT",
+    "AUDIOFLAMINGO2",
+    "KOELTTS",
+    "UNIWAV",
+    "A2SB",
+    "ETTA",
+    "TANGOFLUX",
+    "EXPRESSIVESINGER",
+    "SYNTHIO",
+    "ROBUSTALIGN"
+  ]
+}

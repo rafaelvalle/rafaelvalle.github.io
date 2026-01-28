@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;600;700&display=swap');
+
+    :root {
+      --navy: #1a365d;
+      --gold: #b8860b;
+      --dark-gray: #2d3748;
+      --medium-gray: #4a5568;
+      --light-gray: #718096;
+      --very-light-gray: #e2e8f0;
+      --cream: #faf8f5;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 11.5pt;
+      line-height: 1.5;
+      color: var(--dark-gray);
+      background: var(--cream);
+    }
+
+    .resume {
+      max-width: 8.5in;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    /* Header */
+    .header {
+      background: var(--navy);
+      padding: 32px 48px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 32pt;
+      font-weight: 700;
+      color: white;
+      letter-spacing: 4px;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+
+    .header .title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* Contact bar */
+    .contact-bar {
+      background: var(--very-light-gray);
+      border-bottom: 3px solid var(--gold);
+      padding: 12px 48px;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9.5pt;
+      color: var(--medium-gray);
+    }
+
+    .contact-bar a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--navy);
+    }
+
+    .contact-bar a:hover {
+      color: var(--gold);
+      border-color: var(--gold);
+    }
+
+    .contact-bar .separator {
+      color: var(--gold);
+      margin: 0 12px;
+    }
+
+    /* Main content */
+    .content {
+      padding: 32px 48px;
+    }
+
+    /* Section headers */
+    .content h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: var(--navy);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-top: 28px;
+      margin-bottom: 4px;
+    }
+
+    .content h2::after {
+      content: '';
+      display: block;
+      width: 80px;
+      height: 2px;
+      background: var(--gold);
+      margin-top: 6px;
+      margin-bottom: 16px;
+    }
+
+    /* Company/School headers */
+    .content h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12pt;
+      font-weight: 600;
+      color: var(--navy);
+      margin-top: 20px;
+      margin-bottom: 4px;
+    }
+
+    /* Role subsections */
+    .content h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10pt;
+      font-weight: 600;
+      color: var(--gold);
+      margin-top: 14px;
+      margin-bottom: 8px;
+    }
+
+    /* Role title - styled bold paragraphs after h3 */
+    .content h3 + p strong:only-child,
+    .content h3 + p > strong:first-child {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 11pt;
+      color: var(--dark-gray);
+    }
+
+    /* Date lines */
+    .content h3 + p + p em:only-child,
+    .content p > em:only-child {
+      font-size: 10pt;
+      color: var(--medium-gray);
+    }
+
+    /* Paragraphs */
+    .content p {
+      margin-bottom: 12px;
+    }
+
+    .content strong {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* Lists */
+    .content ul {
+      list-style: none;
+      margin-bottom: 12px;
+    }
+
+    .content ul li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 6px;
+    }
+
+    .content ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 10pt;
+    }
+
+    /* Links in content */
+    .content a {
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .content a:hover {
+      color: var(--gold);
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        background: white;
+      }
+      .resume {
+        box-shadow: none;
+        max-width: none;
+      }
+      .content h2 {
+        page-break-after: avoid;
+      }
+      .content h3 {
+        page-break-after: avoid;
+      }
+    }
+
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <div class="header">
+      <h1 id="header-name"></h1>
+      <div class="title" id="header-title"></div>
+    </div>
+    <div class="contact-bar" id="contact-bar"></div>
+    <div class="content" id="content"></div>
+  </div>
+
+  <script>
+    async function loadResume() {
+      try {
+        const response = await fetch('resume.md');
+        const text = await response.text();
+        
+        // Parse YAML front matter
+        const frontMatterMatch = text.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+        
+        if (frontMatterMatch) {
+          const frontMatter = jsyaml.load(frontMatterMatch[1]);
+          const content = frontMatterMatch[2];
+          
+          // Populate header
+          document.getElementById('header-name').textContent = frontMatter.name || '';
+          document.getElementById('header-title').textContent = frontMatter.title || '';
+          
+          // Populate contact bar
+          const contactParts = [];
+          if (frontMatter.location) contactParts.push(frontMatter.location);
+          if (frontMatter.email) contactParts.push(frontMatter.email);
+          if (frontMatter.linkedin) contactParts.push(`<a href="${frontMatter.linkedin}">LinkedIn</a>`);
+          if (frontMatter.website) contactParts.push(`<a href="${frontMatter.website}">Website</a>`);
+          if (frontMatter.scholar) contactParts.push(`<a href="${frontMatter.scholar}">Google Scholar</a>`);
+          
+          document.getElementById('contact-bar').innerHTML = 
+            contactParts.join('<span class="separator">◆</span>');
+          
+          // Parse and render markdown content
+          document.getElementById('content').innerHTML = marked.parse(content);
+        }
+      } catch (error) {
+        console.error('Error loading resume:', error);
+        document.getElementById('content').innerHTML = 
+          '<p>Error loading resume. Make sure resume.md is in the same directory.</p>';
+      }
+    }
+    
+    loadResume();
+  </script>
+</body>
+</html>
